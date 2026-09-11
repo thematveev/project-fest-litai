@@ -1,0 +1,47 @@
+/**
+ * Scroll-triggered reveal animations — IntersectionObserver
+ */
+(function () {
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function (el) {
+      el.classList.add('visible');
+    });
+    return;
+  }
+
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0,
+      rootMargin: '0px 0px -10% 0px',
+    }
+  );
+
+  var elements = document.querySelectorAll('.reveal, .reveal-stagger');
+  elements.forEach(function (el) {
+    observer.observe(el);
+  });
+
+  function checkVisible() {
+    elements.forEach(function (el) {
+      if (!el.classList.contains('visible')) {
+        var rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.95) {
+          el.classList.add('visible');
+          observer.unobserve(el);
+        }
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkVisible, { passive: true });
+  window.addEventListener('resize', checkVisible, { passive: true });
+  checkVisible();
+})();

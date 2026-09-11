@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ЛІТАЙ — Фестиваль психології | 24 жовтня 2026, Антверпен</title>
+  <meta name="description"
+    content="Одноденний фестиваль про ресурс і живе спілкування зі своїми людьми. Психологія, тілесні практики, творчість. 24 жовтня 2026, Антверпен.">
+  <meta property="og:title" content="ЛІТАЙ — Фестиваль психології">
+  <meta property="og:description"
+    content="Відчувай. Надихайся. Літай. Одноденний фестиваль про ресурс і живе спілкування. 24 жовтня 2026, Антверпен.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-image.jpg">
+
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+
+  <!-- SVG Sprite (hidden, used via <use href="#icon-name">) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden">
+    <defs>
+      <symbol id="icon-feather" viewBox="0 0 64 64" fill="none">
+        <path d="M8 56C8 56 12 40 24 28C36 16 56 8 56 8C56 8 52 24 40 36C28 48 8 56 8 56Z" stroke="currentColor"
+          stroke-width="1.5" />
+        <path d="M8 56C8 56 20 36 32 24C44 12 56 8 56 8" stroke="currentColor" stroke-width="0.8" opacity="0.4" />
+      </symbol>
+      <symbol id="icon-bird" viewBox="0 0 64 64" fill="none">
+        <path d="M4 40C12 36 20 24 28 20C36 16 44 20 48 24C52 28 48 36 40 40" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round" />
+        <path d="M48 24C52 16 56 12 60 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        <path d="M48 24C56 20 60 16 62 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+      </symbol>
+      <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" />
+        <line x1="16" y1="2" x2="16" y2="6" />
+        <line x1="8" y1="2" x2="8" y2="6" />
+        <line x1="3" y1="10" x2="21" y2="10" />
+      </symbol>
+      <symbol id="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+        <circle cx="12" cy="9" r="2.5" />
+      </symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
+      </symbol>
+      <symbol id="icon-ticket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 9a3 3 0 000 6v3a1 1 0 001 1h18a1 1 0 001-1v-3a3 3 0 000-6V6a1 1 0 00-1-1H3a1 1 0 00-1 1v3z" />
+        <line x1="9" y1="4" x2="9" y2="20" stroke-dasharray="2 2" />
+      </symbol>
+      <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="4" width="20" height="16" rx="2" />
+        <polyline points="22,6 12,13 2,6" />
+      </symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12" />
+        <polyline points="12 5 19 12 12 19" />
+      </symbol>
+      <symbol id="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 12 15 18 9" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="20 6 9 17 4 12" />
+      </symbol>
+      <!-- New icons -->
+      <symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+      </symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </symbol>
+      <symbol id="icon-wings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 16C6 14 10 10 14 8C18 6 20 8 22 10" />
+        <path d="M2 16C6 18 10 18 14 16C18 14 20 12 22 10" />
+        <path d="M12 2v6" />
+        <path d="M9 5l3 3 3-3" />
+      </symbol>
+      <symbol id="icon-group" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 00-3-3.87" />
+        <path d="M16 3.13a4 4 0 010 7.75" />
+      </symbol>
+      <symbol id="icon-brain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9.5 2a3.5 3.5 0 00-3.2 2.1A3.5 3.5 0 003 7.5a3.5 3.5 0 001.5 2.9A3.5 3.5 0 003 13.5a3.5 3.5 0 003.2 2.1A3.5 3.5 0 009.5 22" />
+        <path d="M14.5 2a3.5 3.5 0 013.2 2.1A3.5 3.5 0 0121 7.5a3.5 3.5 0 01-1.5 2.9A3.5 3.5 0 0121 13.5a3.5 3.5 0 01-3.2 2.1A3.5 3.5 0 0114.5 22" />
+        <path d="M9.5 2v20" />
+      </symbol>
+      <symbol id="icon-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="13.5" cy="6.5" r="0.5" fill="currentColor" />
+        <circle cx="17.5" cy="10.5" r="0.5" fill="currentColor" />
+        <circle cx="8.5" cy="7.5" r="0.5" fill="currentColor" />
+        <circle cx="6.5" cy="12.5" r="0.5" fill="currentColor" />
+        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
+      </symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+      </symbol>
+      <symbol id="icon-coffee" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 8h1a4 4 0 010 8h-1" />
+        <path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z" />
+        <line x1="6" y1="1" x2="6" y2="4" />
+        <line x1="10" y1="1" x2="10" y2="4" />
+        <line x1="14" y1="1" x2="14" y2="4" />
+      </symbol>
+      <symbol id="icon-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 12 20 22 4 22 4 12" />
+        <rect x="2" y="7" width="20" height="5" />
+        <line x1="12" y1="22" x2="12" y2="7" />
+        <path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z" />
+        <path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z" />
+      </symbol>
+      <symbol id="icon-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z" />
+        <circle cx="12" cy="13" r="4" />
+      </symbol>
+      <symbol id="icon-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <line x1="12" y1="16" x2="12" y2="12" />
+        <line x1="12" y1="8" x2="12.01" y2="8" />
+      </symbol>
+      <symbol id="icon-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+        <circle cx="12" cy="7" r="4" />
+      </symbol>
+      <symbol id="icon-music" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18V5l12-2v13" />
+        <circle cx="6" cy="18" r="3" />
+        <circle cx="18" cy="16" r="3" />
+      </symbol>
+      <symbol id="icon-brush" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 20a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="none" />
+        <path d="M9.06 2.94a1.5 1.5 0 012.88 0c.28.93.93 1.7 1.81 2.18a1.5 1.5 0 011.11 1.88l-1.06 5.3-4.62 3.08" />
+        <path d="M15.12 15.34l-3.22 2.15c-.65.44-1.47.44-2.12 0a1.5 1.5 0 01-.55-2.05l1.78-3.2" />
+      </symbol>
+      <symbol id="icon-spa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22c4-4 8-7.5 8-12A8 8 0 004 10c0 4.5 4 8 8 12z" />
+        <path d="M12 12V2" />
+        <path d="M8 6c2 2 4 2 4 2s2 0 4-2" />
+      </symbol>
+      <symbol id="icon-gamepad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <line x1="6" y1="12" x2="10" y2="12" />
+        <line x1="8" y1="10" x2="8" y2="14" />
+        <circle cx="15" cy="13" r="1" fill="currentColor" />
+        <circle cx="18" cy="11" r="1" fill="currentColor" />
+        <path d="M2 6a2 2 0 012-2h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" />
+      </symbol>
+      <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+        <polyline points="9 22 9 12 15 12 15 22" />
+      </symbol>
+      <symbol id="icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+        <polyline points="15 3 21 3 21 9" />
+        <line x1="10" y1="14" x2="21" y2="3" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ═══════════════ HEADER ═══════════════ -->
+
+  <header class="header is-transparent" id="header">
+    <div class="header__inner">
+      <a href="#" class="header__logo">
+        <img src="assets/logo/logo.JPG" alt="ЛІТАЙ FEST">
+      </a>
+
+      <nav class="header__nav" aria-label="Основна навігація">
+        <a href="#about" class="header__nav-link">Про фестиваль</a>
+        <a href="#program" class="header__nav-link">Програма</a>
+        <a href="#speakers" class="header__nav-link">Спікери</a>
+        <a href="#tickets" class="header__nav-link">Вартість</a>
+      </nav>
+
+      <button class="header__menu-btn" id="menu-open" aria-label="Відкрити меню">
+        <svg viewBox="0 0 24 24">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Мобільне меню">
+    <button class="mobile-menu__close" id="menu-close" aria-label="Закрити меню">
+      <svg viewBox="0 0 24 24">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+    <nav class="mobile-menu__nav" aria-label="Мобільна навігація">
+      <a href="#about" class="mobile-menu__link">Про фестиваль</a>
+      <a href="#program" class="mobile-menu__link">Програма</a>
+      <a href="#speakers" class="mobile-menu__link">Спікери</a>
+      <a href="#tickets" class="mobile-menu__link">Вартість</a>
+      <a href="#tickets" class="btn btn-primary mobile-menu__cta">Квитки</a>
+    </nav>
+  </div>
+
+
+  <main>
+
+    <!-- ═══════════════ 01 — HERO ═══════════════ -->
+
+    <section class="hero section-hero" id="hero">
+      <!-- Olive branch decoration — left -->
+      <div class="olive-branch olive-branch--hero-left" aria-hidden="true">
+        <svg viewBox="0 0 220 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M180 500C180 500 160 420 140 360C120 300 80 260 60 220C40 180 30 120 40 60C50 0 80 20 80 20"
+            stroke="var(--color-brand-primary)" stroke-width="1.2" opacity="0.12" stroke-linecap="round" />
+          <path d="M60 220C60 220 30 210 20 190C10 170 20 150 40 155C60 160 65 180 60 220Z"
+            fill="var(--color-brand-primary)" opacity="0.06" />
+          <path d="M70 185C70 185 45 170 35 155C25 140 35 120 55 125C75 130 75 155 70 185Z"
+            fill="var(--color-brand-primary)" opacity="0.05" />
+          <path d="M80 150C80 150 55 135 50 118C45 100 58 85 75 90C92 95 88 125 80 150Z"
+            fill="var(--color-brand-primary)" opacity="0.07" />
+          <path d="M85 115C85 115 65 95 62 78C59 60 75 50 88 58C101 66 95 90 85 115Z"
+            fill="var(--color-brand-primary)" opacity="0.05" />
+          <path d="M75 80C75 80 55 60 55 42C55 24 70 15 82 25C94 35 85 55 75 80Z"
+            fill="var(--color-brand-primary)" opacity="0.04" />
+          <path d="M100 250C100 250 130 240 145 225C160 210 150 190 130 195C110 200 105 225 100 250Z"
+            fill="var(--color-brand-primary)" opacity="0.06" />
+          <path d="M95 290C95 290 125 280 140 265C155 250 148 230 128 235C108 240 100 265 95 290Z"
+            fill="var(--color-brand-primary)" opacity="0.05" />
+          <path d="M100 330C100 330 135 320 150 305C165 290 155 270 135 275C115 280 105 305 100 330Z"
+            fill="var(--color-brand-primary)" opacity="0.07" />
+          <circle cx="55" cy="200" r="3" fill="var(--color-brand-gold)" opacity="0.15" />
+          <circle cx="65" cy="165" r="2.5" fill="var(--color-brand-gold)" opacity="0.12" />
+          <circle cx="78" cy="130" r="2" fill="var(--color-brand-gold)" opacity="0.1" />
+          <circle cx="82" cy="95" r="2.5" fill="var(--color-brand-gold)" opacity="0.12" />
+          <circle cx="110" cy="265" r="3" fill="var(--color-brand-gold)" opacity="0.15" />
+          <circle cx="105" cy="305" r="2.5" fill="var(--color-brand-gold)" opacity="0.12" />
+          <circle cx="115" cy="345" r="2" fill="var(--color-brand-gold)" opacity="0.1" />
+        </svg>
+      </div>
+
+      <!-- Olive branch decoration — right top -->
+      <div class="olive-branch olive-branch--hero-right" aria-hidden="true">
+        <svg viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 0C20 0 40 80 60 140C80 200 120 240 140 280C160 320 170 380 160 440"
+            stroke="var(--color-brand-gold)" stroke-width="1" opacity="0.1" stroke-linecap="round" />
+          <path d="M140 280C140 280 170 290 180 310C190 330 180 350 160 345C140 340 135 315 140 280Z"
+            fill="var(--color-brand-gold)" opacity="0.06" />
+          <path d="M130 315C130 315 155 330 165 345C175 360 165 380 145 375C125 370 125 345 130 315Z"
+            fill="var(--color-brand-gold)" opacity="0.05" />
+          <path d="M120 350C120 350 145 365 150 382C155 400 140 415 125 405C110 395 115 370 120 350Z"
+            fill="var(--color-brand-gold)" opacity="0.07" />
+          <path d="M80 200C80 200 50 210 35 225C20 240 30 260 50 255C70 250 75 225 80 200Z"
+            fill="var(--color-brand-gold)" opacity="0.05" />
+          <path d="M90 240C90 240 60 250 45 265C30 280 40 300 60 295C80 290 85 265 90 240Z"
+            fill="var(--color-brand-gold)" opacity="0.06" />
+          <circle cx="145" cy="295" r="3" fill="var(--color-brand-primary)" opacity="0.1" />
+          <circle cx="135" cy="335" r="2.5" fill="var(--color-brand-primary)" opacity="0.08" />
+          <circle cx="70" cy="215" r="2.5" fill="var(--color-brand-primary)" opacity="0.08" />
+          <circle cx="75" cy="255" r="2" fill="var(--color-brand-primary)" opacity="0.1" />
+        </svg>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__meta-simple hero-slide-up" data-delay="400">24 жовтня · Антверпен · Mobilant</p>
+          <h1 class="hero__title hero-slide-up" data-delay="500">ЛІТАЙ FEST</h1>
+          <p class="hero__tagline hero-slide-up" data-delay="600">Там, де починаються<br>внутрішні зміни</p>
+          <p class="hero__description hero-slide-up" data-delay="650">Перший український ресурсний фестиваль у Бельгії. Один день, щоб відпочити, відновити внутрішню опору й відчути: «Я серед своїх».</p>
+          <div class="hero__actions hero-slide-up" data-delay="700">
+            <button type="button" class="btn btn-primary ticket-open-btn">
+              ЗАБРОНЮВАТИ МІСЦЕ
+              <svg class="btn-feather" width="18" height="18" viewBox="0 0 64 64" fill="none">
+                <path d="M8 56C8 56 12 40 24 28C36 16 56 8 56 8C56 8 52 24 40 36C28 48 8 56 8 56Z" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </button>
+            <button type="button" class="btn btn-outline" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+              ДІЗНАТИСЯ БІЛЬШЕ
+            </button>
+          </div>
+          <div class="hero__tags hero-slide-up" data-delay="800">
+            <span>Практики</span>
+            <span class="hero__tag-sep">·</span>
+            <span>Творчість</span>
+            <span class="hero__tag-sep">·</span>
+            <span>Важливі теми</span>
+            <span class="hero__tag-sep">·</span>
+            <span>Нові знайомства</span>
+          </div>
+        </div>
+
+        <!-- Badge: 60 місць -->
+        <div class="hero__badge hero-slide-up" data-delay="600">
+          <span class="hero__badge-label">ЛИШЕ</span>
+          <span class="hero__badge-number">60</span>
+          <span class="hero__badge-sub">МІСЦЬ</span>
+        </div>
+
+        <div class="hero__particles" id="hero-particles"></div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ 02 — ABOUT ═══════════════ -->
+
+    <section class="section" id="about">
+      <!-- Olive branch decoration -->
+      <div class="olive-branch olive-branch--about" aria-hidden="true">
+        <svg viewBox="0 0 300 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 60C0 60 60 55 120 50C180 45 240 40 300 35"
+            stroke="var(--color-brand-gold)" stroke-width="0.8" opacity="0.12" stroke-linecap="round" />
+          <path d="M60 55C60 55 50 35 55 25C60 15 75 18 75 30C75 42 65 50 60 55Z"
+            fill="var(--color-brand-gold)" opacity="0.07" />
+          <path d="M100 52C100 52 90 32 95 22C100 12 115 15 115 27C115 39 105 47 100 52Z"
+            fill="var(--color-brand-gold)" opacity="0.06" />
+          <path d="M150 48C150 48 140 28 145 18C150 8 165 11 165 23C165 35 155 43 150 48Z"
+            fill="var(--color-brand-gold)" opacity="0.07" />
+          <path d="M200 44C200 44 190 24 195 14C200 4 215 7 215 19C215 31 205 39 200 44Z"
+            fill="var(--color-brand-gold)" opacity="0.06" />
+          <path d="M250 40C250 40 240 20 245 10C250 0 265 3 265 15C265 27 255 35 250 40Z"
+            fill="var(--color-brand-gold)" opacity="0.07" />
+          <path d="M80 53C80 53 70 73 75 83C80 93 95 90 95 78C95 66 85 58 80 53Z"
+            fill="var(--color-brand-primary)" opacity="0.05" />
+          <path d="M130 50C130 50 120 70 125 80C130 90 145 87 145 75C145 63 135 55 130 50Z"
+            fill="var(--color-brand-primary)" opacity="0.04" />
+          <path d="M180 46C180 46 170 66 175 76C180 86 195 83 195 71C195 59 185 51 180 46Z"
+            fill="var(--color-brand-primary)" opacity="0.05" />
+          <path d="M230 42C230 42 220 62 225 72C230 82 245 79 245 67C245 55 235 47 230 42Z"
+            fill="var(--color-brand-primary)" opacity="0.04" />
+          <circle cx="65" cy="42" r="2" fill="var(--color-brand-primary)" opacity="0.08" />
+          <circle cx="110" cy="38" r="2" fill="var(--color-brand-primary)" opacity="0.08" />
+          <circle cx="160" cy="35" r="2" fill="var(--color-brand-primary)" opacity="0.08" />
+          <circle cx="210" cy="31" r="2" fill="var(--color-brand-primary)" opacity="0.08" />
+          <circle cx="260" cy="27" r="2" fill="var(--color-brand-primary)" opacity="0.08" />
+        </svg>
+      </div>
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-header__label">Про фестиваль</p>
+          <h2 class="section-header__title">Одноденний фестиваль про ресурс і живе спілкування зі своїми людьми.</h2>
+        </div>
+
+        <div class="about__intro reveal">
+          <div class="about__intro-accent" aria-hidden="true"></div>
+          <div class="about__text">
+            <p class="about__lead"><strong>Для кого «ЛІТАЙ»?</strong></p>
+            <p>Для тих, кому цікаві люди, психологія та пізнання себе. Для тих, хто хоче відпочити, наповнитися,
+              відкритися новим знайомствам і провести день у легкій та приймаючій атмосфері.</p>
+          </div>
+        </div>
+
+        <div class="about__benefits reveal-stagger">
+          <div class="about__benefit">
+            <div class="about__benefit-icon">
+              <svg width="28" height="28"><use href="#icon-palette" /></svg>
+            </div>
+            <h4 class="about__benefit-title">Новий досвід</h4>
+            <p class="about__benefit-desc">Через дієві психологічні, тілесні та творчі практики — від нейрографіки до гіпнотерапії.</p>
+          </div>
+          <div class="about__benefit">
+            <div class="about__benefit-icon">
+              <svg width="28" height="28"><use href="#icon-brain" /></svg>
+            </div>
+            <h4 class="about__benefit-title">Нові відкриття про себе</h4>
+            <p class="about__benefit-desc">Через відчуття, думки та несподівані усвідомлення, які з'являються в безпечному просторі.</p>
+          </div>
+          <div class="about__benefit">
+            <div class="about__benefit-icon">
+              <svg width="28" height="28"><use href="#icon-group" /></svg>
+            </div>
+            <h4 class="about__benefit-title">Живі знайомства</h4>
+            <p class="about__benefit-desc">Легке спілкування з людьми зі схожими інтересами. Знайдіть свою спільноту.</p>
+          </div>
+          <div class="about__benefit">
+            <div class="about__benefit-icon">
+              <svg width="28" height="28"><use href="#icon-star" /></svg>
+            </div>
+            <h4 class="about__benefit-title">Свій ресурс</h4>
+            <p class="about__benefit-desc">Те, що наповнить саме вас і залишиться з вами після фестивалю — як внутрішня опора.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ 03 — PROGRAM ═══════════════ -->
+
+    <section class="section" id="program" style="background: var(--color-white);">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-header__label">Програма</p>
+          <h2 class="section-header__title">Програма дня</h2>
+        </div>
+
+        <div class="program__timeline reveal">
+          <div class="program__line"></div>
+
+          <div class="program__item">
+            <div class="program__marker"></div>
+            <div class="program__icon">
+              <svg width="20" height="20"><use href="#icon-coffee" /></svg>
+            </div>
+            <p class="program__time">10:00 — 10:30</p>
+            <h3 class="program__title">Реєстрація · кава · знайомство</h3>
+            <p class="program__desc">Знайомимося, п'ємо каву та занурюємося в атмосферу фестивалю.</p>
+          </div>
+
+          <div class="program__item">
+            <div class="program__marker"></div>
+            <div class="program__icon">
+              <svg width="20" height="20"><use href="#icon-feather" /></svg>
+            </div>
+            <p class="program__time">10:30 — 11:30</p>
+            <h3 class="program__title">Відкриття фестивалю</h3>
+            <p class="program__desc">Привітання від організаторів, знайомство зі спікерами та програмою дня.</p>
+          </div>
+
+          <div class="program__item">
+            <div class="program__marker"></div>
+            <div class="program__icon">
+              <svg width="20" height="20"><use href="#icon-brush" /></svg>
+            </div>
+            <p class="program__time">11:30 — 12:50</p>
+            <h3 class="program__title">I лінійка майстер-класів</h3>
+            <p class="program__desc">4 майстер-класи одночасно. Оберіть один, який найбільше відгукується.</p>
+          </div>
+
+          <div class="program__item">
+            <div class="program__marker"></div>
+            <div class="program__icon">
+              <svg width="20" height="20"><use href="#icon-coffee" /></svg>
+            </div>
+            <p class="program__time">12:50 — 14:00</p>
+            <h3 class="program__title">Обід · вільний час · маркет</h3>
+            <p class="program__desc">Насолоджуємося кейтерингом, спілкуємося та відвідуємо маркет.</p>
+          </div>
+
+          <div class="program__item">
+            <div class="program__marker"></div>
+            <div class="program__icon">
+              <svg width="20" height="20"><use href="#icon-brush" /></svg>
+            </div>
+            <p class="program__time">14:00 — 15:20</p>
+            <h3 class="program__title">II лінійка майстер-класів</h3>
+            <p class="program__desc">4 нових майстер-класи. Оберіть інший напрямок для занурення.</p>
+          </div>
+
+          <div class="program__item">
+            <div class="program__marker"></div>
+            <div class="program__icon">
+              <svg width="20" height="20"><use href="#icon-location" /></svg>
+            </div>
+            <p class="program__time">15:20 — 16:00</p>
+            <h3 class="program__title">Вільний час · маркет</h3>
+            <p class="program__desc">Час для покупок, спілкування та особистого простору.</p>
+          </div>
+
+          <div class="program__item">
+            <div class="program__marker"></div>
+            <div class="program__icon">
+              <svg width="20" height="20"><use href="#icon-brush" /></svg>
+            </div>
+            <p class="program__time">16:00 — 17:20</p>
+            <h3 class="program__title">III лінійка майстер-класів</h3>
+            <p class="program__desc">Остання лінійка. Завершуйте день тим, що надихає.</p>
+          </div>
+
+          <div class="program__item">
+            <div class="program__marker"></div>
+            <div class="program__icon">
+              <svg width="20" height="20"><use href="#icon-gift" /></svg>
+            </div>
+            <p class="program__time">17:30 — 18:40</p>
+            <h3 class="program__title">Закриття фестивалю · розіграш подарунків</h3>
+            <p class="program__desc">Підбиваємо підсумки дня та розігруємо подарунки серед учасників.</p>
+          </div>
+
+          <div class="program__item">
+            <div class="program__marker"></div>
+            <div class="program__icon">
+              <svg width="20" height="20"><use href="#icon-camera" /></svg>
+            </div>
+            <p class="program__time">18:40 — 19:00</p>
+            <h3 class="program__title">Фото · спілкування · вільне завершення</h3>
+            <p class="program__desc">Фотографуйтеся, обмінюйтеся контактами та завершуйте день у теплій атмосфері.</p>
+          </div>
+        </div>
+
+        <div class="quote reveal" style="margin-top: var(--space-8);">
+          Маркет працює з 10:00 до 16:00. Кава та кейтеринг протягом дня. Фото та інтерактиви для спогадів.
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ 04 — MASTERCLASSES ═══════════════ -->
+
+    <section class="section" id="masterclasses">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-header__label">Майстер-класи</p>
+          <h2 class="section-header__title">3 лінійки · 12 майстер-класів</h2>
+          <p class="section-header__desc">У кожній лінійці одночасно відбуваються 4 майстер-класи. Учасник обирає один
+            майстер-клас із кожної лінійки.</p>
+        </div>
+
+        <div class="masterclasses__tabs reveal">
+          <button class="masterclasses__tab is-active" data-tab="0">I лінійка · 11:30</button>
+          <button class="masterclasses__tab" data-tab="1">II лінійка · 14:00</button>
+          <button class="masterclasses__tab" data-tab="2">III лінійка · 16:00</button>
+        </div>
+
+        <!-- Tab 1 -->
+        <div class="masterclasses__panel is-active" data-panel="0">
+          <div class="masterclasses__grid reveal-stagger">
+            <div class="mk-card">
+              <p class="mk-card__speaker">Катерина Степаненко</p>
+              <h3 class="mk-card__title">Між бажанням та дією: що заважає нам втілювати свої наміри в життя</h3>
+              <p class="mk-card__desc">Чому ми можемо добре знати, чого хочемо, але знову відкладати перший крок? На
+                майстер-класі учасники досліджуватимуть, що саме стоїть між бажанням і дією.</p>
+            </div>
+            <div class="mk-card">
+              <p class="mk-card__speaker">Олена Дудченко</p>
+              <h3 class="mk-card__title">Арттерапія з глиною «Відчуй свої крила»</h3>
+              <p class="mk-card__desc">Творча практика з глиною для дослідження внутрішнього стану через дотик і форму.
+              </p>
+            </div>
+            <div class="mk-card">
+              <p class="mk-card__speaker">Катерина Міхалькевіч</p>
+              <h3 class="mk-card__title">Тіло памʼятає шлях до гармонії</h3>
+              <p class="mk-card__desc">Тілесні практики зі звукотерапією чашами. Через рух, дихання та звучання чаш
+                учасники зможуть сповільнитися та дослідити власний стан через тіло.</p>
+            </div>
+            <div class="mk-card">
+              <p class="mk-card__speaker">Ольга Тріфонова</p>
+              <h3 class="mk-card__title">Групова гіпнотерапевтична практика «Мені можна» + мандала наміру</h3>
+              <p class="mk-card__desc">Практика про внутрішні заборони та переконання. Через сфокусовану увагу учасники
+                помітять власні «не можна» та створять мандалу наміру.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2 -->
+        <div class="masterclasses__panel" data-panel="1">
+          <div class="masterclasses__grid reveal-stagger">
+            <div class="mk-card">
+              <p class="mk-card__speaker">Маша Плохута</p>
+              <h3 class="mk-card__title">Інтуїтивне малювання</h3>
+              <p class="mk-card__desc">Авторська техніка інтуїтивного малювання з використанням абстрактних метафоричних
+                карток. Для участі не потрібен художній досвід.</p>
+            </div>
+            <div class="mk-card">
+              <p class="mk-card__speaker">Валентина Тищук</p>
+              <h3 class="mk-card__title">Тіньові сторони сексуальності / архетипи</h3>
+              <p class="mk-card__desc">Практика з МАК для дослідження архетипів та тіньових сторін.</p>
+            </div>
+            <div class="mk-card">
+              <p class="mk-card__speaker">Юлія Губарєва</p>
+              <h3 class="mk-card__title">Психологічна гра «Формула удачі»</h3>
+              <p class="mk-card__desc">Гра про пошук власної формули щастя. Учасники досліджуватимуть, що насправді
+                робить їхнє життя наповненим.</p>
+            </div>
+            <div class="mk-card">
+              <p class="mk-card__speaker">Еліна Олексієнко</p>
+              <h3 class="mk-card__title">Майстер-клас із нейрографіки</h3>
+              <p class="mk-card__desc">Нейрографіка — творчий метод, який через малювання допомагає подивитися на свій
+                запит з іншого боку та знайти нові рішення.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3 -->
+        <div class="masterclasses__panel" data-panel="2">
+          <div class="masterclasses__grid reveal-stagger">
+            <div class="mk-card">
+              <p class="mk-card__speaker">Світлана Коркіна</p>
+              <h3 class="mk-card__title">Тілесна практика «Стихії всередині тебе»</h3>
+              <p class="mk-card__desc">Наші емоції живуть не лише в думках — тіло також відчуває, зберігає та виражає їх. Через вільний рух і танець учасники досліджуватимуть свої внутрішні стани через образи різних стихій.</p>
+            </div>
+            <div class="mk-card">
+              <p class="mk-card__speaker">Ірина Макара</p>
+              <h3 class="mk-card__title">«Пташки» — творчий майстер-клас зі створення свічок</h3>
+              <p class="mk-card__desc">Творчий процес створення свічок як медитативна практика.</p>
+            </div>
+            <div class="mk-card">
+              <p class="mk-card__speaker">Людмила Сисоєва</p>
+              <h3 class="mk-card__title">Подорож Героїні. Подорож у світ своєї сили</h3>
+              <p class="mk-card__desc">Запрошення у подорож до себе — своєї сили, свободи та нових можливостей.</p>
+            </div>
+            <div class="mk-card">
+              <p class="mk-card__speaker">Лія Петренко</p>
+              <h3 class="mk-card__title">Казкотерапія «Навіщо дорослим казки?»</h3>
+              <p class="mk-card__desc">Казки — не лише для дітей. Через образи, символи та сюжети можна побачити знайомі
+                ситуації з іншого боку.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ 05 — SPEAKERS ═══════════════ -->
+
+    <section class="section" id="speakers" style="background: var(--color-white);">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-header__label">Учасники</p>
+          <h2 class="section-header__title">Спікери фестивалю</h2>
+        </div>
+
+        <div class="speakers__grid reveal-stagger">
+
+          <!-- 1 -->
+          <div class="speakers__card">
+            <img src="assets/photos/speakers/speaker-1.jpg" alt="Катерина Степаненко" class="speakers__photo"
+              loading="lazy">
+            <div class="speakers__info">
+              <h3 class="speakers__name">Катерина Степаненко</h3>
+              <p class="speakers__role">Психологиня · акредитована когнітивно-поведінкова терапевтка · фахівчиня з
+                гештальт- та схема-терапії</p>
+            </div>
+            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
+            <div class="speakers__bio">
+              <p>Засновниця Центру когнітивної терапії Psyhol, авторка та ведуча психологічних ретритів Step to Self.
+                Працює з когнітивно-поведінковим, гештальт- та схема-терапевтичним підходами, перебуває на шляху до
+                акредитації в схема-терапії.</p>
+              <p style="margin-top: 12px;"><em>Майстер-клас «Між бажанням та дією: що заважає нам втілювати свої наміри
+                  в життя»</em></p>
+              <p style="margin-top: 8px;">Чому ми можемо добре знати, чого хочемо, але знову відкладати перший крок?
+                Чому одні наміри переходять у дії, а інші так і залишаються планами?</p>
+              <p style="margin-top: 8px;">На майстер-класі учасники досліджуватимуть, що саме стоїть між бажанням і
+                дією, які внутрішні механізми можуть нас зупиняти та що допомагає перейти від наміру до реальних кроків.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="speakers__card speakers__tba">
+            <div class="speakers__photo"
+              style="display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--color-gray-500);">
+              Очікується</div>
+            <div class="speakers__info">
+              <h3 class="speakers__name">Олена Дудченко</h3>
+              <p class="speakers__role">Арттерапевтка</p>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="speakers__card">
+            <img src="assets/photos/speakers/speaker-3.jpg" alt="Катерина Міхалькевіч" class="speakers__photo"
+              loading="lazy">
+            <div class="speakers__info">
+              <h3 class="speakers__name">Катерина Міхалькевіч</h3>
+              <p class="speakers__role">Викладачка кундаліні-йоги · коуч · засновниця Innerlijk Kompas</p>
+            </div>
+            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
+            <div class="speakers__bio">
+              <p>Допомагає через роботу з тілом, диханням, увагою та емоціями знаходити внутрішню опору, ясність і краще
+                керувати своїм станом у мінливому світі.</p>
+              <p style="margin-top: 12px;"><em>«Тіло памʼятає шлях до гармонії» — Тілесні практики зі звукотерапією
+                  чашами</em></p>
+              <p style="margin-top: 8px;">Практика, де через рух, дихання, увагу до тіла та звучання чаш учасники
+                зможуть сповільнитися, переключити увагу із зовнішнього на себе та дослідити власний стан через тіло.
+              </p>
+              <p style="margin-top: 8px;">«Не потрібно чекати, поки життя стане спокійнішим, щоб нарешті відчути себе
+                добре».</p>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="speakers__card">
+            <img src="assets/photos/speakers/speaker-4.jpg" alt="Ольга Тріфонова" class="speakers__photo"
+              loading="lazy">
+            <div class="speakers__info">
+              <h3 class="speakers__name">Ольга Тріфонова</h3>
+              <p class="speakers__role">Практикуюча психологиня · EMDR-терапевтка · гіпнотерапевтка</p>
+            </div>
+            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
+            <div class="speakers__bio">
+              <p>Працює в мультимодальному підході, поєднуючи EMDR, гіпнотерапію, когнітивно-поведінкову та арттерапію.
+                Допомагає працювати з емоціями, внутрішніми переконаннями та реакціями, які не завжди вдається змінити
+                лише через логічне осмислення.</p>
+              <p style="margin-top: 12px;"><em>Групова гіпнотерапевтична практика «Мені можна»</em></p>
+              <p style="margin-top: 8px;">Практика про внутрішні заборони та переконання, які колись могли допомагати й
+                захищати, але сьогодні вже обмежують.</p>
+              <p style="margin-top: 8px;">Через сфокусовану увагу учасники спробують помітити власні внутрішні «не
+                можна», дослідити їх та дати місце новим можливостям і дозволам.</p>
+              <p style="margin-top: 8px;">У другій частині майстер-класу кожен створить власну мандалу наміру —
+                особистий візерунок, що символізуватиме звільнення від внутрішніх блоків і те нове, що хочеться
+                дозволити собі.</p>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="speakers__card">
+            <img src="assets/photos/speakers/speaker-5.jpg" alt="Маша Плохута" class="speakers__photo" loading="lazy">
+            <div class="speakers__info">
+              <h3 class="speakers__name">Маша Плохута</h3>
+              <p class="speakers__role">Мультидисциплінарна художниця · дизайнерка · арттерапевтка</p>
+            </div>
+            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
+            <div class="speakers__bio">
+              <p>Маша працює з мікс-медіа та інтуїтивним мистецтвом, досліджуючи внутрішній світ людини через творчість,
+                колір та абстрактні форми.</p>
+              <p style="margin-top: 12px;"><em>Майстер-клас «Інтуїтивне малювання»</em></p>
+              <p style="margin-top: 8px;">На майстер-класі учасники спробують авторську техніку інтуїтивного малювання з
+                використанням створених Машею абстрактних метафоричних карток.</p>
+              <p style="margin-top: 8px;">Через колір, лінії та форми можна буде досліджувати власні відчуття,
+                довіритися інтуїції та створити свою роботу без правил і необхідності вміти малювати.</p>
+              <p style="margin-top: 8px;">Для участі не потрібен художній досвід.</p>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="speakers__card">
+            <img src="assets/photos/speakers/speaker-6.jpg" alt="Валентина Тищук" class="speakers__photo"
+              loading="lazy">
+            <div class="speakers__info">
+              <h3 class="speakers__name">Валентина Тищук</h3>
+              <p class="speakers__role">Психологиня · практикиня МАК</p>
+            </div>
+            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
+            <div class="speakers__bio">
+              <p><em>«Тіньові сторони сексуальності / архетипи» — Практика з МАК</em></p>
+              <p style="margin-top: 8px;">Практика з метафоричними асоціативними картками для дослідження архетипів та тіньових сторін.</p>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="speakers__card">
+            <img src="assets/photos/speakers/speaker-7.jpg" alt="Юлія Губарєва" class="speakers__photo" loading="lazy">
+            <div class="speakers__info">
+              <h3 class="speakers__name">Юлія Губарєва</h3>
+              <p class="speakers__role">Магістр психології · ігропрактик · арттерапевтка · авторка психологічних ігор і
+                МАК-карт</p>
+            </div>
+            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
+            <div class="speakers__bio">
+              <p>Засновниця та власниця Little HeARTs — простору для мам і дітей у міграції. Створює психологічні
+                інструменти, які через гру, образи та творчість допомагають краще розуміти себе, свої бажання й
+                внутрішні ресурси.</p>
+              <p style="margin-top: 12px;"><em>Психологічна гра «Формула удачі»</em></p>
+              <p style="margin-top: 8px;">Гра про пошук власної формули щастя. Учасники досліджуватимуть, що насправді
+                робить їхнє життя наповненим, чого вони хочуть і які ресурси вже мають для руху до бажаного.</p>
+              <p style="margin-top: 8px;">Через гру можна буде краще почути себе, визначити важливі життєві орієнтири та
+                перетворити свої бажання на конкретні кроки, з яких можна почати вже зараз.</p>
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div class="speakers__card">
+            <img src="assets/photos/speakers/speaker-8.jpg" alt="Еліна Олексієнко" class="speakers__photo"
+              loading="lazy">
+            <div class="speakers__info">
+              <h3 class="speakers__name">Еліна Олексієнко</h3>
+              <p class="speakers__role">Коуч · інструкторка з нейрографіки та МАК</p>
+            </div>
+            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
+            <div class="speakers__bio">
+              <p>Працює індивідуально та з групами понад 4 роки, проводить жіночі зустрічі та брала участь як ведуча у
+                жіночих ретритах. У своїй роботі допомагає побачити нові можливості та знайти власні відповіді через
+                творчі практики.</p>
+              <p style="margin-top: 12px;"><em>Майстер-клас із нейрографіки</em></p>
+              <p style="margin-top: 8px;">Нейрографіка — творчий метод, який через малювання допомагає подивитися на
+                свій запит з іншого боку, дослідити думки й переживання та знайти нові рішення.</p>
+              <p style="margin-top: 8px;">На майстер-класі учасники познайомляться з основними елементами й принципами
+                нейрографіки та одразу спробують метод на практиці, створивши власний малюнок.</p>
+              <p style="margin-top: 8px;">Практика може бути особливо цікавою тим, хто шукає новий погляд на ситуацію,
+                внутрішні відповіді, ресурс та простір для творчого дослідження себе.</p>
+            </div>
+          </div>
+
+          <!-- 9 -->
+          <div class="speakers__card">
+            <img src="assets/photos/speakers/speaker-9.jpg" alt="Світлана Коркіна" class="speakers__photo"
+              loading="lazy">
+            <div class="speakers__info">
+              <h3 class="speakers__name">Світлана Коркіна</h3>
+              <p class="speakers__role">Психологиня · Членкиня Міжнародної асоціації емоційно-фокусованих терапевтів</p>
+            </div>
+            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
+            <div class="speakers__bio">
+              <p>Психологиня, Членкиня Міжнародної асоціації емоційно-фокусованих терапевтів. Має понад 16 років досвіду роботи з тілом через вільний рух і танець, поєднуючи психологічний погляд із тілесним досвідом.</p>
+              <p style="margin-top: 12px;"><em>Тілесна практика «Стихії всередині тебе»</em></p>
+              <p style="margin-top: 8px;">Наші емоції живуть не лише в думках — тіло також відчуває, зберігає та виражає їх.</p>
+              <p style="margin-top: 8px;">Через вільний рух і танець учасники досліджуватимуть свої внутрішні стани через образи різних стихій, помічаючи, як емоції проявляються в тілі та як змінюються, коли ми дозволяємо їм вивільнятися через рух.</p>
+              <p style="margin-top: 8px;">Це практика де немає правильних рухів і необхідності вміти танцювати — кожна учасниця створить свій особливий простір, де можна відчути свободу і дати тілу можливість звільнитися від напруги прихованих емоцій.</p>
+            </div>
+          </div>
+
+          <!-- 10 -->
+          <div class="speakers__card">
+            <img src="assets/photos/speakers/speaker-10.jpg" alt="Ірина Макара" class="speakers__photo"
+              loading="lazy">
+            <div class="speakers__info">
+              <h3 class="speakers__name">Ірина Макара</h3>
+              <p class="speakers__role">Організаторка · майстриня</p>
+            </div>
+            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
+            <div class="speakers__bio">
+              <p>Організаторка фестивалю «ЛІТАЙ» та майстриня створення свічок.</p>
+              <p style="margin-top: 12px;"><em>«Пташки» — творчий майстер-клас зі створення свічок</em></p>
+              <p style="margin-top: 8px;">Творчий процес створення свічок як медитативна практика.</p>
+            </div>
+          </div>
+
+          <!-- 11 -->
+          <div class="speakers__card">
+            <img src="assets/photos/speakers/speaker-11.jpg" alt="Людмила Сисоєва" class="speakers__photo"
+              loading="lazy">
+            <div class="speakers__info">
+              <h3 class="speakers__name">Людмила Сисоєва</h3>
+              <p class="speakers__role">Клінічна психологиня · травматерапевтка · тілесна терапевтка · доула</p>
+            </div>
+            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
+            <div class="speakers__bio">
+              <p>Понад 20 років працює з жінками, парами та сім'ями, супроводжуючи їх у періоди змін, криз і важливих
+                життєвих переходів. Мама п'ятьох дітей.</p>
+              <p style="margin-top: 12px;"><em>Практичний майстер-клас «Подорож Героїні. Подорож у світ своєї сили»</em>
+              </p>
+              <p style="margin-top: 8px;">Це запрошення у подорож до себе — своєї сили, свободи та нових можливостей.
+              </p>
+              <p style="margin-top: 8px;">Через практичну роботу учасниці зможуть звернутися до власного досвіду,
+                побачити внутрішні опори та дослідити, що вже є всередині для наступного етапу життя.</p>
+            </div>
+          </div>
+
+          <!-- 12 -->
+          <div class="speakers__card">
+            <img src="assets/photos/speakers/speaker-12.jpg" alt="Лія Петренко" class="speakers__photo" loading="lazy">
+            <div class="speakers__info">
+              <h3 class="speakers__name">Лія Петренко</h3>
+              <p class="speakers__role">Коуч-психологиня · 5 років практичного досвіду</p>
+            </div>
+            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
+            <div class="speakers__bio">
+              <p>У своїй роботі допомагає досліджувати себе, власні переживання та життєві ситуації через психологічні й
+                творчі підходи.</p>
+              <p style="margin-top: 12px;"><em>Майстер-клас із казкотерапії «Навіщо дорослим казки?»</em></p>
+              <p style="margin-top: 8px;">Казки — не лише для дітей. Через образи, символи та сюжети вони можуть
+                допомогти побачити знайомі життєві ситуації з іншого боку та краще почути себе.</p>
+              <p style="margin-top: 8px;">На майстер-класі учасники познайомляться з казкотерапією та спробують
+                дослідити власну історію через світ казки й метафори.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ 06 — VALUES ═══════════════ -->
+
+    <section class="section" id="values">
+      <!-- Olive branch decoration — left -->
+      <div class="olive-branch olive-branch--values-left" aria-hidden="true">
+        <svg viewBox="0 0 120 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 0C100 0 90 60 80 100C70 140 50 170 40 200C30 230 25 270 30 300"
+            stroke="var(--color-brand-primary)" stroke-width="0.8" opacity="0.08" stroke-linecap="round" />
+          <path d="M80 100C80 100 55 95 48 82C41 69 52 58 62 62C72 66 76 82 80 100Z"
+            fill="var(--color-brand-primary)" opacity="0.05" />
+          <path d="M65 140C65 140 40 135 33 122C26 109 37 98 47 102C57 106 61 122 65 140Z"
+            fill="var(--color-brand-primary)" opacity="0.04" />
+          <path d="M50 180C50 180 25 175 18 162C11 149 22 138 32 142C42 146 46 162 50 180Z"
+            fill="var(--color-brand-primary)" opacity="0.05" />
+          <path d="M40 220C40 220 15 215 8 202C1 189 12 178 22 182C32 186 36 202 40 220Z"
+            fill="var(--color-brand-primary)" opacity="0.04" />
+          <circle cx="72" cy="115" r="2" fill="var(--color-brand-gold)" opacity="0.1" />
+          <circle cx="55" cy="155" r="2" fill="var(--color-brand-gold)" opacity="0.08" />
+          <circle cx="42" cy="195" r="1.5" fill="var(--color-brand-gold)" opacity="0.1" />
+        </svg>
+      </div>
+      <!-- Olive branch decoration — right -->
+      <div class="olive-branch olive-branch--values-right" aria-hidden="true">
+        <svg viewBox="0 0 120 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 0C20 0 30 60 40 100C50 140 70 170 80 200C90 230 95 270 90 300"
+            stroke="var(--color-brand-gold)" stroke-width="0.8" opacity="0.1" stroke-linecap="round" />
+          <path d="M40 100C40 100 65 95 72 82C79 69 68 58 58 62C48 66 44 82 40 100Z"
+            fill="var(--color-brand-gold)" opacity="0.05" />
+          <path d="M55 140C55 140 80 135 87 122C94 109 83 98 73 102C63 106 59 122 55 140Z"
+            fill="var(--color-brand-gold)" opacity="0.04" />
+          <path d="M70 180C70 180 95 175 102 162C109 149 98 138 88 142C78 146 74 162 70 180Z"
+            fill="var(--color-brand-gold)" opacity="0.05" />
+          <path d="M80 220C80 220 105 215 112 202C119 189 108 178 98 182C88 186 84 202 80 220Z"
+            fill="var(--color-brand-gold)" opacity="0.04" />
+          <circle cx="48" cy="115" r="2" fill="var(--color-brand-primary)" opacity="0.08" />
+          <circle cx="65" cy="155" r="2" fill="var(--color-brand-primary)" opacity="0.08" />
+          <circle cx="78" cy="195" r="1.5" fill="var(--color-brand-primary)" opacity="0.08" />
+        </svg>
+      </div>
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-header__label">Ідея фестивалю</p>
+          <h2 class="section-header__title">Чотири цінності</h2>
+        </div>
+
+        <div class="values__grid reveal-stagger">
+          <div class="values__item">
+            <div class="values__icon">
+              <svg width="36" height="36"><use href="#icon-heart" /></svg>
+            </div>
+            <p class="values__number">01</p>
+            <h3 class="values__name">Сила</h3>
+            <p class="values__desc">Внутрішня сила, яка з'являється, коли ми дозволяємо собі бути собою.</p>
+            <div class="values__decorative"></div>
+          </div>
+          <div class="values__item">
+            <div class="values__icon">
+              <svg width="36" height="36"><use href="#icon-shield" /></svg>
+            </div>
+            <p class="values__number">02</p>
+            <h3 class="values__name">Опора</h3>
+            <p class="values__desc">Люди, які поруч. Простір, де можна бути вразливим і отримати підтримку.</p>
+            <div class="values__decorative"></div>
+          </div>
+          <div class="values__item">
+            <div class="values__icon">
+              <svg width="36" height="36"><use href="#icon-wings" /></svg>
+            </div>
+            <p class="values__number">03</p>
+            <h3 class="values__name">Свобода</h3>
+            <p class="values__desc">Свобода обирати, відчувати, експериментувати без страху та очікувань.</p>
+            <div class="values__decorative"></div>
+          </div>
+          <div class="values__item">
+            <div class="values__icon">
+              <svg width="36" height="36"><use href="#icon-group" /></svg>
+            </div>
+            <p class="values__number">04</p>
+            <h3 class="values__name">Спільнота</h3>
+            <p class="values__desc">Зв'язок із людьми, які розуміють. Місце, де народжуються нові знайомства.</p>
+            <div class="values__decorative"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ 07 — LOCATION ═══════════════ -->
+
+    <section class="section" id="location" style="background: var(--color-white);">
+      <!-- Olive branch decoration -->
+      <div class="olive-branch olive-branch--location" aria-hidden="true">
+        <svg viewBox="0 0 400 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 40C0 40 100 35 200 30C300 25 350 20 400 15"
+            stroke="var(--color-brand-primary)" stroke-width="0.8" opacity="0.08" stroke-linecap="round" />
+          <path d="M80 37C80 37 70 22 75 14C80 6 92 9 90 18C88 27 82 33 80 37Z"
+            fill="var(--color-brand-primary)" opacity="0.05" />
+          <path d="M160 33C160 33 150 18 155 10C160 2 172 5 170 14C168 23 162 29 160 33Z"
+            fill="var(--color-brand-primary)" opacity="0.04" />
+          <path d="M240 29C240 29 230 14 235 6C240 -2 252 1 250 10C248 19 242 25 240 29Z"
+            fill="var(--color-brand-primary)" opacity="0.05" />
+          <path d="M320 25C320 25 310 10 315 2C320 -6 332 -3 330 6C328 15 322 21 320 25Z"
+            fill="var(--color-brand-primary)" opacity="0.04" />
+          <path d="M120 35C120 35 110 50 115 58C120 66 132 63 130 54C128 45 122 39 120 35Z"
+            fill="var(--color-brand-gold)" opacity="0.05" />
+          <path d="M200 31C200 31 190 46 195 54C200 62 212 59 210 50C208 41 202 35 200 31Z"
+            fill="var(--color-brand-gold)" opacity="0.04" />
+          <path d="M280 27C280 27 270 42 275 50C280 58 292 55 290 46C288 37 282 31 280 27Z"
+            fill="var(--color-brand-gold)" opacity="0.05" />
+          <circle cx="85" cy="22" r="1.5" fill="var(--color-brand-gold)" opacity="0.08" />
+          <circle cx="165" cy="18" r="1.5" fill="var(--color-brand-gold)" opacity="0.08" />
+          <circle cx="245" cy="14" r="1.5" fill="var(--color-brand-gold)" opacity="0.08" />
+          <circle cx="325" cy="10" r="1.5" fill="var(--color-brand-gold)" opacity="0.08" />
+        </svg>
+      </div>
+      <div class="container">
+        <div class="location__inner reveal">
+          <div id="location-map" class="location__map"></div>
+          <div class="location__info">
+            <p class="location__label">Локація</p>
+            <h2 class="location__name">Mobilant</h2>
+            <p class="location__address">
+              Plantin en Moretuslei 155<br>
+              2140 Antwerpen
+            </p>
+            <div class="location__details">
+              <div class="location__detail">
+                <svg class="location__detail-icon" width="20" height="20"><use href="#icon-calendar" /></svg>
+                <div>
+                  <p class="location__detail-label">Коли</p>
+                  <p class="location__detail-value">24 жовтня 2026 року</p>
+                </div>
+              </div>
+              <div class="location__detail">
+                <svg class="location__detail-icon" width="20" height="20"><use href="#icon-clock" /></svg>
+                <div>
+                  <p class="location__detail-label">Час</p>
+                  <p class="location__detail-value">10:00 — 19:00</p>
+                </div>
+              </div>
+              <div class="location__detail">
+                <svg class="location__detail-icon" width="20" height="20"><use href="#icon-coffee" /></svg>
+                <div>
+                  <p class="location__detail-label">Харчування</p>
+                  <p class="location__detail-value">Кава та кейтеринг протягом дня</p>
+                </div>
+              </div>
+              <div class="location__detail">
+                <svg class="location__detail-icon" width="20" height="20"><use href="#icon-location" /></svg>
+                <div>
+                  <p class="location__detail-label">Маркет</p>
+                  <p class="location__detail-value">Працює з 10:00 до 16:00</p>
+                </div>
+              </div>
+            </div>
+            <a href="https://maps.google.com/?q=Mobilant+Antwerpen" class="btn btn-secondary" target="_blank"
+              rel="noopener">
+              Як дістатися
+              <svg width="16" height="16"><use href="#icon-external" /></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ 08 — TICKETS ═══════════════ -->
+
+    <section class="section tickets" id="tickets">
+      <!-- Olive branch decoration — top -->
+      <div class="olive-branch olive-branch--tickets-top" aria-hidden="true">
+        <svg viewBox="0 0 500 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 80C0 80 120 70 250 60C380 50 440 40 500 30"
+            stroke="var(--color-brand-gold)" stroke-width="0.8" opacity="0.1" stroke-linecap="round" />
+          <path d="M100 72C100 72 88 55 93 45C98 35 112 38 110 48C108 58 102 66 100 72Z"
+            fill="var(--color-brand-gold)" opacity="0.08" />
+          <path d="M200 64C200 64 188 47 193 37C198 27 212 30 210 40C208 50 202 58 200 64Z"
+            fill="var(--color-brand-gold)" opacity="0.07" />
+          <path d="M300 56C300 56 288 39 293 29C298 19 312 22 310 32C308 42 302 50 300 56Z"
+            fill="var(--color-brand-gold)" opacity="0.08" />
+          <path d="M400 48C400 48 388 31 393 21C398 11 412 14 410 24C408 34 402 42 400 48Z"
+            fill="var(--color-brand-gold)" opacity="0.07" />
+          <path d="M150 68C150 68 138 85 143 93C148 101 162 98 160 88C158 78 152 72 150 68Z"
+            fill="var(--color-brand-primary)" opacity="0.06" />
+          <path d="M250 60C250 60 238 77 243 85C248 93 262 90 260 80C258 70 252 64 250 60Z"
+            fill="var(--color-brand-primary)" opacity="0.05" />
+          <path d="M350 52C350 52 338 69 343 77C348 85 362 82 360 72C358 62 352 56 350 52Z"
+            fill="var(--color-brand-primary)" opacity="0.06" />
+          <circle cx="105" cy="52" r="2" fill="var(--color-brand-gold)" opacity="0.12" />
+          <circle cx="205" cy="44" r="2" fill="var(--color-brand-gold)" opacity="0.1" />
+          <circle cx="305" cy="36" r="2" fill="var(--color-brand-gold)" opacity="0.12" />
+          <circle cx="405" cy="28" r="2" fill="var(--color-brand-gold)" opacity="0.1" />
+        </svg>
+      </div>
+      <!-- Olive branch decoration — bottom -->
+      <div class="olive-branch olive-branch--tickets-bottom" aria-hidden="true">
+        <svg viewBox="0 0 500 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 20C0 20 120 30 250 40C380 50 440 60 500 70"
+            stroke="var(--color-brand-gold)" stroke-width="0.8" opacity="0.08" stroke-linecap="round" />
+          <path d="M100 28C100 28 88 45 93 55C98 65 112 62 110 52C108 42 102 34 100 28Z"
+            fill="var(--color-brand-gold)" opacity="0.06" />
+          <path d="M200 36C200 36 188 53 193 63C198 73 212 70 210 60C208 50 202 42 200 36Z"
+            fill="var(--color-brand-gold)" opacity="0.05" />
+          <path d="M300 44C300 44 288 61 293 71C298 81 312 78 310 68C308 58 302 50 300 44Z"
+            fill="var(--color-brand-gold)" opacity="0.06" />
+          <path d="M400 52C400 52 388 69 393 79C398 89 412 86 410 76C408 66 402 58 400 52Z"
+            fill="var(--color-brand-gold)" opacity="0.05" />
+          <circle cx="105" cy="48" r="1.5" fill="var(--color-brand-primary)" opacity="0.08" />
+          <circle cx="205" cy="56" r="1.5" fill="var(--color-brand-primary)" opacity="0.08" />
+          <circle cx="305" cy="64" r="1.5" fill="var(--color-brand-primary)" opacity="0.08" />
+          <circle cx="405" cy="72" r="1.5" fill="var(--color-brand-primary)" opacity="0.08" />
+        </svg>
+      </div>
+      <div class="container tickets__inner">
+        <div class="section-header reveal">
+          <p class="section-header__label">Квитки</p>
+          <h2 class="section-header__title" style="color: var(--color-white);">Обери свій квиток на «ЛІТАЙ»</h2>
+        </div>
+
+        <div class="tickets__stages reveal-stagger">
+          <div class="tickets__stage is-sold-out">
+            <p class="tickets__price">55 &euro;</p>
+            <p class="tickets__stage-desc">Перші 10 квитків</p>
+          </div>
+          <div class="tickets__stage is-current">
+            <p class="tickets__price">75 &euro;</p>
+            <p class="tickets__stage-desc">Основна вартість</p>
+          </div>
+          <div class="tickets__stage">
+            <p class="tickets__price">95 &euro;</p>
+            <p class="tickets__stage-desc">Фінальна вартість</p>
+          </div>
+        </div>
+
+        <div class="tickets__includes reveal">
+          <p class="tickets__includes-title">У вартість квитка входить:</p>
+          <div class="tickets__includes-list">
+            <p class="tickets__includes-item">
+              <svg class="tickets__check-icon" width="16" height="16"><use href="#icon-check" /></svg>
+              Участь у фестивалі протягом усього дня
+            </p>
+            <p class="tickets__includes-item">
+              <svg class="tickets__check-icon" width="16" height="16"><use href="#icon-check" /></svg>
+              3 майстер-класи на вибір — по одному з кожної лінійки
+            </p>
+            <p class="tickets__includes-item">
+              <svg class="tickets__check-icon" width="16" height="16"><use href="#icon-check" /></svg>
+              Відкриття та закриття фестивалю
+            </p>
+            <p class="tickets__includes-item">
+              <svg class="tickets__check-icon" width="16" height="16"><use href="#icon-check" /></svg>
+              Кейтеринг та кава
+            </p>
+            <p class="tickets__includes-item">
+              <svg class="tickets__check-icon" width="16" height="16"><use href="#icon-check" /></svg>
+              Доступ до маркету й усіх загальних активностей
+            </p>
+            <p class="tickets__includes-item">
+              <svg class="tickets__check-icon" width="16" height="16"><use href="#icon-check" /></svg>
+              Участь у розіграші подарунків
+            </p>
+          </div>
+        </div>
+
+        <p class="tickets__limit reveal">Кількість місць обмежена — лише 60 учасників.</p>
+
+        <div class="reveal">
+          <button type="button" class="btn btn-primary btn-lg ticket-open-btn">
+            Купити квиток
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ 09 — PARTNERS ═══════════════ -->
+
+    <section class="section" id="partners">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-header__label">Партнери</p>
+          <h2 class="section-header__title">Партнери фестивалю</h2>
+        </div>
+        <div class="partners__placeholder reveal">
+          <div class="partners__placeholder-icon">
+            <svg width="32" height="32"><use href="#icon-heart" /></svg>
+          </div>
+          <p>Інформація про партнерів буде додана найближчим часом.</p>
+          <p class="partners__placeholder-sub">Якщо ви хочете стати партнером фестивалю — зв'яжіться з нами.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ 10 — FAQ ═══════════════ -->
+
+    <section class="section" id="faq" style="background: var(--color-white);">
+      <!-- Olive branch decoration -->
+      <div class="olive-branch olive-branch--faq" aria-hidden="true">
+        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 200C10 200 30 160 50 130C70 100 90 80 110 60C130 40 160 20 190 0"
+            stroke="var(--color-brand-primary)" stroke-width="0.8" opacity="0.06" stroke-linecap="round" />
+          <path d="M50 130C50 130 30 125 25 112C20 99 32 90 40 95C48 100 48 115 50 130Z"
+            fill="var(--color-brand-primary)" opacity="0.04" />
+          <path d="M80 95C80 95 60 90 55 77C50 64 62 55 70 60C78 65 78 80 80 95Z"
+            fill="var(--color-brand-primary)" opacity="0.03" />
+          <path d="M110 65C110 65 90 60 85 47C80 34 92 25 100 30C108 35 108 50 110 65Z"
+            fill="var(--color-brand-primary)" opacity="0.04" />
+          <path d="M140 40C140 40 120 35 115 22C110 9 122 0 130 5C138 10 138 25 140 40Z"
+            fill="var(--color-brand-primary)" opacity="0.03" />
+          <circle cx="45" cy="118" r="1.5" fill="var(--color-brand-gold)" opacity="0.08" />
+          <circle cx="75" cy="83" r="1.5" fill="var(--color-brand-gold)" opacity="0.06" />
+          <circle cx="105" cy="53" r="1.5" fill="var(--color-brand-gold)" opacity="0.08" />
+        </svg>
+      </div>
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-header__label">Питання — відповіді</p>
+          <h2 class="section-header__title">Часті питання</h2>
+        </div>
+
+        <div class="faq__list reveal">
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              <span class="faq__question-text">
+                <svg class="faq__q-icon" width="20" height="20"><use href="#icon-user" /></svg>
+                Чи потрібно бути психологом або мати досвід участі в психологічних практиках?
+              </span>
+              <svg class="faq__icon" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                Ні. «ЛІТАЙ» відкритий для всіх, кому цікаві психологія, пізнання себе та новий досвід. Спеціальні знання
+                чи попередня підготовка не потрібні.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              <span class="faq__question-text">
+                <svg class="faq__q-icon" width="20" height="20"><use href="#icon-info" /></svg>
+                Як обрати майстер-клас?
+              </span>
+              <svg class="faq__icon" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                Перед кожною лінійкою спікери коротко представлять себе та свої майстер-класи. Також ви отримаєте
+                програму з усіма темами, щоб легко обрати те, що найбільше відгукується.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              <span class="faq__question-text">
+                <svg class="faq__q-icon" width="20" height="20"><use href="#icon-group" /></svg>
+                Чи можна прийти на фестиваль самій/самому?
+              </span>
+              <svg class="faq__icon" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                Звісно. Фестиваль створений так, щоб було легко знайомитися, спілкуватися та почуватися комфортно,
+                навіть якщо ви прийшли самі.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              <span class="faq__question-text">
+                <svg class="faq__q-icon" width="20" height="20"><use href="#icon-ticket" /></svg>
+                Чи можна повернути квиток?
+              </span>
+              <svg class="faq__icon" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                Так, квиток можна повернути не пізніше ніж за 14 днів до початку фестивалю. Зверніться до нас через Instagram або email.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              <span class="faq__question-text">
+                <svg class="faq__q-icon" width="20" height="20"><use href="#icon-location" /></svg>
+                Чи є парковка поруч із локацією?
+              </span>
+              <svg class="faq__icon" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                Поруч із Mobilant є громадська парковка. Також зручно дістатися громадським транспортом — зупинка Plantin знаходиться неподалік.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ 11 — TEAM ═══════════════ -->
+
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-header__label">Хто створює «ЛІТАЙ»</p>
+          <h2 class="section-header__title">Команда</h2>
+        </div>
+
+        <div class="team__org reveal">
+          <div class="team__org-icon">
+            <svg width="28" height="28"><use href="#icon-home" /></svg>
+          </div>
+          <h3 class="team__org-name">OporaSpace</h3>
+          <p class="team__org-desc">Неприбуткова громадська організація в Бельгії, що створює проєкти та події для
+            української спільноти. Ми віримо, що разом ми сильніші.</p>
+        </div>
+
+        <div class="team__members reveal-stagger">
+          <div class="team__card">
+            <img src="assets/photos/speakers/speaker-1.jpg" alt="Катерина Степаненко" class="team__photo" loading="lazy">
+            <p class="team__name">Катерина Степаненко</p>
+          </div>
+          <div class="team__card">
+            <div class="team__photo team__photo--placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </div>
+            <p class="team__name">Яна Рега</p>
+          </div>
+          <div class="team__card">
+            <div class="team__photo team__photo--placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </div>
+            <p class="team__name">Вікторія Бойченко</p>
+          </div>
+          <div class="team__card">
+            <img src="assets/photos/speakers/speaker-10.jpg" alt="Ірина Макара" class="team__photo" loading="lazy">
+            <p class="team__name">Ірина Макара</p>
+          </div>
+          <div class="team__card">
+            <img src="assets/photos/speakers/speaker-6.jpg" alt="Валентина Тищук" class="team__photo" loading="lazy">
+            <p class="team__name">Валентина Тищук</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════ SPEAKER MODAL ═══════════════ -->
+
+  <div class="speakers-modal" id="speaker-modal" role="dialog" aria-label="Інформація про спікера">
+    <div class="speakers-modal__overlay" id="speaker-modal-overlay"></div>
+    <div class="speakers-modal__content">
+      <button class="speakers-modal__close" id="speaker-modal-close" aria-label="Закрити">
+        <svg viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <img class="speakers-modal__photo" id="modal-photo" src="" alt="">
+      <h3 class="speakers-modal__name" id="modal-name"></h3>
+      <p class="speakers-modal__role" id="modal-role"></p>
+      <div class="speakers-modal__bio" id="modal-bio"></div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════ TICKET FORM MODAL ═══════════════ -->
+
+  <div class="ticket-modal" id="ticket-modal" role="dialog" aria-label="Заявка на купівлю квитка">
+    <div class="ticket-modal__overlay" id="ticket-modal-overlay"></div>
+    <div class="ticket-modal__content">
+      <button class="ticket-modal__close" id="ticket-modal-close" aria-label="Закрити">
+        <svg viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <div class="ticket-modal__header">
+        <h3 class="ticket-modal__title">Заявка на квиток</h3>
+        <p class="ticket-modal__subtitle">Заповніть форму, і ми зв'яжемося з вами для оформлення</p>
+      </div>
+      <form class="ticket-form" id="ticket-form" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="ticket-name">Ім'я *</label>
+          <input class="form-input" type="text" id="ticket-name" name="name" placeholder="Ваше ім'я" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="ticket-email">Email *</label>
+          <input class="form-input" type="email" id="ticket-email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="ticket-phone">Телефон *</label>
+          <input class="form-input" type="tel" id="ticket-phone" name="phone" placeholder="Телефон" required>
+        </div>
+        <input type="hidden" name="ticketType" value="75">
+        <button class="btn btn-primary btn-lg ticket-form__submit" type="submit">
+          Надіслати заявку
+          <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </button>
+      </form>
+      <div class="ticket-form__success" id="ticket-form-success" style="display: none;">
+        <div class="ticket-form__success-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="16 8 10.5 14 8 11.5" />
+          </svg>
+        </div>
+        <h4 class="ticket-form__success-title">Заявку надіслано!</h4>
+        <p class="ticket-form__success-text">Ми зв'яжемося з вами найближчим часом для оформлення квитка.</p>
+        <button class="btn btn-secondary" id="ticket-form-success-close">Закрити</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#" class="footer__logo">
+        <img src="assets/logo/logo.JPG" alt="ЛІТАЙ FEST">
+      </a>
+
+      <nav class="footer__nav" aria-label="Футер навігація">
+        <a href="#about" class="footer__nav-link">
+          <svg width="16" height="16"><use href="#icon-info" /></svg>
+          Про фестиваль
+        </a>
+        <a href="#program" class="footer__nav-link">
+          <svg width="16" height="16"><use href="#icon-calendar" /></svg>
+          Програма
+        </a>
+        <a href="#speakers" class="footer__nav-link">
+          <svg width="16" height="16"><use href="#icon-user" /></svg>
+          Учасники
+        </a>
+        <a href="#location" class="footer__nav-link">
+          <svg width="16" height="16"><use href="#icon-location" /></svg>
+          Локація
+        </a>
+      </nav>
+
+      <div class="footer__social">
+        <a href="https://www.instagram.com/litay_fest" class="footer__social-link" target="_blank" rel="noopener"
+          aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+        </a>
+        <a href="https://www.threads.com/@litay_fest_be" class="footer__social-link" target="_blank" rel="noopener"
+          aria-label="Threads">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" />
+            <path d="M8 12a4 4 0 1 0 8 0 4 4 0 0 0-8 0z" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer__decorative"></div>
+
+      <p class="footer__copy">&copy; 2026 ЛІТАЙ FEST</p>
+    </div>
+  </footer>
+
+
+  <script src="js/header.js"></script>
+  <script src="js/mobile-menu.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/scroll-animations.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var map = new maplibregl.Map({
+        container: 'location-map',
+        style: {
+          version: 8,
+          sources: {
+            osm: {
+              type: 'raster',
+              tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+              tileSize: 256,
+              attribution: ''
+            }
+          },
+          layers: [{
+            id: 'osm',
+            type: 'raster',
+            source: 'osm'
+          }]
+        },
+        center: [4.4003, 51.2176],
+        zoom: 15,
+        attributionControl: false
+      });
+
+      map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
+
+      var popup = new maplibregl.Popup({ offset: 16, closeButton: false })
+        .setHTML('<strong>Mobilant</strong><br>Plantin en Moretuslei 155<br>2140 Antwerpen');
+
+      var marker = new maplibregl.Marker({ color: '#8B6914' })
+        .setLngLat([4.4003, 51.2176])
+        .setPopup(popup)
+        .addTo(map);
+
+      popup.addTo(map);
+    });
+  </script>
+</body>
+
+</html>

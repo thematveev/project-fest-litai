@@ -1,0 +1,299 @@
+- generic [active] [ref=f5e1]:
+  - banner [ref=f5e2]:
+    - generic [ref=f5e3]:
+      - link [ref=f5e4] [cursor=pointer]:
+        - /url: "#"
+        - img "ЛІТАЙ FEST" [ref=f5e5]
+      - navigation "Основна навігація" [ref=f5e6]:
+        - link "Про фестиваль" [ref=f5e7] [cursor=pointer]:
+          - /url: "#about"
+        - link "Програма" [ref=f5e8] [cursor=pointer]:
+          - /url: "#program"
+        - link "Учасники" [ref=f5e9] [cursor=pointer]:
+          - /url: "#speakers"
+        - link "Локація" [ref=f5e10] [cursor=pointer]:
+          - /url: "#location"
+      - link "Квитки" [ref=f5e11] [cursor=pointer]:
+        - /url: "#tickets"
+  - main [ref=f5e12]:
+    - generic [ref=f5e15]:
+      - paragraph [ref=f5e16]: 24 жовтня 2026
+      - heading "ЛІТАЙ" [level=1] [ref=f5e17]
+      - paragraph [ref=f5e18]: Відчувай. Надихайся. Літай.
+      - link "Купити квиток" [ref=f5e20] [cursor=pointer]:
+        - /url: "#tickets"
+    - generic [ref=f5e24]:
+      - generic [ref=f5e25]:
+        - paragraph [ref=f5e26]: Про фестиваль
+        - heading "Одноденний фестиваль про ресурс і живе спілкування зі своїми людьми." [level=2] [ref=f5e27]
+      - generic [ref=f5e28]:
+        - generic [ref=f5e29]:
+          - paragraph [ref=f5e30]:
+            - strong [ref=f5e31]: Для кого «ЛІТАЙ»?
+          - paragraph [ref=f5e32]: Для тих, кому цікаві люди, психологія та пізнання себе. Для тих, хто хоче відпочити, наповнитися, відкритися новим знайомствам і провести день у легкій та приймаючій атмосфері.
+        - img "Атмосфера фестивалю" [ref=f5e33]
+      - generic [ref=f5e34]:
+        - generic [ref=f5e35]:
+          - heading "Новий досвід" [level=4] [ref=f5e36]
+          - paragraph [ref=f5e37]: Через дієві психологічні, тілесні та творчі практики.
+        - generic [ref=f5e38]:
+          - heading "Нові відкриття про себе" [level=4] [ref=f5e39]
+          - paragraph [ref=f5e40]: Через відчуття, думки та несподівані усвідомлення.
+        - generic [ref=f5e41]:
+          - heading "Живі знайомства" [level=4] [ref=f5e42]
+          - paragraph [ref=f5e43]: Легке спілкування з людьми зі схожими інтересами.
+        - generic [ref=f5e44]:
+          - heading "Свій ресурс" [level=4] [ref=f5e45]
+          - paragraph [ref=f5e46]: Те, що наповнить саме вас і залишиться з вами після фестивалю.
+    - generic [ref=f5e48]:
+      - generic [ref=f5e49]:
+        - paragraph [ref=f5e50]: Програма
+        - heading "Програма дня" [level=2] [ref=f5e51]
+      - generic [ref=f5e52]:
+        - generic [ref=f5e54]:
+          - paragraph [ref=f5e56]: 10:00 — 10:30
+          - heading "Реєстрація · кава · знайомство" [level=3] [ref=f5e57]
+        - generic [ref=f5e58]:
+          - paragraph [ref=f5e60]: 10:30 — 11:30
+          - heading "Відкриття фестивалю" [level=3] [ref=f5e61]
+        - generic [ref=f5e62]:
+          - paragraph [ref=f5e64]: 11:30 — 12:50
+          - heading "I лінійка майстер-класів" [level=3] [ref=f5e65]
+          - paragraph [ref=f5e66]: 4 майстер-класи одночасно. Оберіть один.
+        - generic [ref=f5e67]:
+          - paragraph [ref=f5e69]: 12:50 — 14:00
+          - heading "Обід · вільний час · маркет" [level=3] [ref=f5e70]
+        - generic [ref=f5e71]:
+          - paragraph [ref=f5e73]: 14:00 — 15:20
+          - heading "II лінійка майстер-класів" [level=3] [ref=f5e74]
+          - paragraph [ref=f5e75]: 4 майстер-класи одночасно. Оберіть один.
+        - generic [ref=f5e76]:
+          - paragraph [ref=f5e78]: 15:20 — 16:00
+          - heading "Вільний час · маркет" [level=3] [ref=f5e79]
+        - generic [ref=f5e80]:
+          - paragraph [ref=f5e82]: 16:00 — 17:20
+          - heading "III лінійка майстер-класів" [level=3] [ref=f5e83]
+          - paragraph [ref=f5e84]: 4 майстер-класи одночасно. Оберіть один.
+        - generic [ref=f5e85]:
+          - paragraph [ref=f5e87]: 17:30 — 18:40
+          - heading "Закриття фестивалю · розіграш подарунків" [level=3] [ref=f5e88]
+        - generic [ref=f5e89]:
+          - paragraph [ref=f5e91]: 18:40 — 19:00
+          - heading "Фото · спілкування · вільне завершення" [level=3] [ref=f5e92]
+      - generic [ref=f5e93]: Маркет працює з 10:00 до 16:00. Кава та кейтеринг протягом дня. Фото та інтерактиви для спогадів.
+    - generic [ref=f5e95]:
+      - generic [ref=f5e96]:
+        - paragraph [ref=f5e97]: Майстер-класи
+        - heading "3 лінійки · 12 майстер-класів" [level=2] [ref=f5e98]
+        - paragraph [ref=f5e99]: У кожній лінійці одночасно відбуваються 4 майстер-класи. Учасник обирає один майстер-клас із кожної лінійки.
+      - generic [ref=f5e100]:
+        - button "I лінійка · 11:30" [ref=f5e101] [cursor=pointer]
+        - button "II лінійка · 14:00" [ref=f5e102] [cursor=pointer]
+        - button "III лінійка · 16:00" [ref=f5e103] [cursor=pointer]
+      - generic [ref=f5e105]:
+        - generic [ref=f5e106]:
+          - paragraph [ref=f5e107]: Катерина Степаненко
+          - 'heading "Між бажанням та дією: що заважає нам втілювати свої наміри в життя" [level=3] [ref=f5e108]'
+          - paragraph [ref=f5e109]: Чому ми можемо добре знати, чого хочемо, але знову відкладати перший крок? На майстер-класі учасники досліджуватимуть, що саме стоїть між бажанням і дією.
+        - generic [ref=f5e110]:
+          - paragraph [ref=f5e111]: Олена Дудченко
+          - heading "Арттерапія з глиною «Відчуй свої крила»" [level=3] [ref=f5e112]
+          - paragraph [ref=f5e113]: Творча практика з глиною для дослідження внутрішнього стану через дотик і форму.
+        - generic [ref=f5e114]:
+          - paragraph [ref=f5e115]: Катерина Міхалькевіч
+          - heading "Тіло памʼятає шлях до гармонії" [level=3] [ref=f5e116]
+          - paragraph [ref=f5e117]: Тілесні практики зі звукотерапією чашами. Через рух, дихання та звучання чаш учасники зможуть сповільнитися та дослідити власний стан через тіло.
+        - generic [ref=f5e118]:
+          - paragraph [ref=f5e119]: Ольга Тріфонова
+          - heading "Групова гіпнотерапевтична практика «Мені можна» + мандала наміру" [level=3] [ref=f5e120]
+          - paragraph [ref=f5e121]: Практика про внутрішні заборони та переконання. Через сфокусовану увагу учасники помітять власні «не можна» та створять мандалу наміру.
+    - generic [ref=f5e123]:
+      - generic [ref=f5e124]:
+        - paragraph [ref=f5e125]: Учасники
+        - heading "Спікери фестивалю" [level=2] [ref=f5e126]
+      - generic [ref=f5e127]:
+        - generic [ref=f5e128]:
+          - img "Катерина Степаненко" [ref=f5e129]
+          - generic [ref=f5e130]:
+            - heading "Катерина Степаненко" [level=3] [ref=f5e131]
+            - paragraph [ref=f5e132]: Психологиня · акредитована когнітивно-поведінкова терапевтка · фахівчиня з гештальт- та схема-терапії
+          - button "Детальніше →" [ref=f5e133] [cursor=pointer]
+        - generic [ref=f5e134]:
+          - generic [ref=f5e135]: Очікується
+          - generic [ref=f5e136]:
+            - heading "Олена Дудченко" [level=3] [ref=f5e137]
+            - paragraph [ref=f5e138]: Арттерапевтка
+        - generic [ref=f5e139]:
+          - img "Катерина Міхалькевіч" [ref=f5e140]
+          - generic [ref=f5e141]:
+            - heading "Катерина Міхалькевіч" [level=3] [ref=f5e142]
+            - paragraph [ref=f5e143]: Викладачка кундаліні-йоги · коуч · засновниця Innerlijk Kompas
+          - button "Детальніше →" [ref=f5e144] [cursor=pointer]
+        - generic [ref=f5e145]:
+          - img "Ольга Тріфонова" [ref=f5e146]
+          - generic [ref=f5e147]:
+            - heading "Ольга Тріфонова" [level=3] [ref=f5e148]
+            - paragraph [ref=f5e149]: Практикуюча психологиня · EMDR-терапевтка · гіпнотерапевтка
+          - button "Детальніше →" [ref=f5e150] [cursor=pointer]
+        - generic [ref=f5e151]:
+          - img "Маша Плохута" [ref=f5e152]
+          - generic [ref=f5e153]:
+            - heading "Маша Плохута" [level=3] [ref=f5e154]
+            - paragraph [ref=f5e155]: Мультидисциплінарна художниця · дизайнерка · арттерапевтка
+          - button "Детальніше →" [ref=f5e156] [cursor=pointer]
+        - generic [ref=f5e157]:
+          - generic [ref=f5e158]: Очікується
+          - generic [ref=f5e159]:
+            - heading "Валентина Тищук" [level=3] [ref=f5e160]
+            - paragraph [ref=f5e161]: Психологиня · практикиня МАК
+        - generic [ref=f5e162]:
+          - img "Юлія Губарєва" [ref=f5e163]
+          - generic [ref=f5e164]:
+            - heading "Юлія Губарєва" [level=3] [ref=f5e165]
+            - paragraph [ref=f5e166]: Магістр психології · ігропрактик · арттерапевтка · авторка психологічних ігор і МАК-карт
+          - button "Детальніше →" [ref=f5e167] [cursor=pointer]
+        - generic [ref=f5e168]:
+          - img "Еліна Олексієнко" [ref=f5e169]
+          - generic [ref=f5e170]:
+            - heading "Еліна Олексієнко" [level=3] [ref=f5e171]
+            - paragraph [ref=f5e172]: Коуч · інструкторка з нейрографіки та МАК
+          - button "Детальніше →" [ref=f5e173] [cursor=pointer]
+        - generic [ref=f5e174]:
+          - generic [ref=f5e175]: Очікується
+          - generic [ref=f5e176]:
+            - heading "Світлана Коркіна" [level=3] [ref=f5e177]
+            - paragraph [ref=f5e178]: Тілесна терапевтка
+        - generic [ref=f5e179]:
+          - generic [ref=f5e180]: Очікується
+          - generic [ref=f5e181]:
+            - heading "Ірина Макара" [level=3] [ref=f5e182]
+            - paragraph [ref=f5e183]: Організаторка · майстриня
+        - generic [ref=f5e184]:
+          - img "Людмила Сисоєва" [ref=f5e185]
+          - generic [ref=f5e186]:
+            - heading "Людмила Сисоєва" [level=3] [ref=f5e187]
+            - paragraph [ref=f5e188]: Клінічна психологиня · травматерапевтка · тілесна терапевтка · доула
+          - button "Детальніше →" [ref=f5e189] [cursor=pointer]
+        - generic [ref=f5e190]:
+          - img "Лія Петренко" [ref=f5e191]
+          - generic [ref=f5e192]:
+            - heading "Лія Петренко" [level=3] [ref=f5e193]
+            - paragraph [ref=f5e194]: Коуч-психологиня · 5 років практичного досвіду
+          - button "Детальніше →" [ref=f5e195] [cursor=pointer]
+    - generic [ref=f5e197]:
+      - generic [ref=f5e198]:
+        - paragraph [ref=f5e199]: Ідея фестивалю
+        - heading "Чотири цінності" [level=2] [ref=f5e200]
+      - generic [ref=f5e201]:
+        - generic [ref=f5e202]:
+          - paragraph [ref=f5e203]: "01"
+          - heading "Сила" [level=3] [ref=f5e204]
+        - generic [ref=f5e206]:
+          - paragraph [ref=f5e207]: "02"
+          - heading "Опора" [level=3] [ref=f5e208]
+        - generic [ref=f5e210]:
+          - paragraph [ref=f5e211]: "03"
+          - heading "Свобода" [level=3] [ref=f5e212]
+        - generic [ref=f5e214]:
+          - paragraph [ref=f5e215]: "04"
+          - heading "Спільнота" [level=3] [ref=f5e216]
+    - generic [ref=f5e220]:
+      - img "Mobilant, Антверпен" [ref=f5e221]
+      - generic [ref=f5e222]:
+        - paragraph [ref=f5e223]: Локація
+        - heading "Mobilant" [level=2] [ref=f5e224]
+        - paragraph [ref=f5e225]: Plantin en Moretuslei 155 2140 Antwerpen
+        - generic [ref=f5e226]:
+          - paragraph [ref=f5e227]:
+            - strong [ref=f5e228]: "Коли:"
+            - text: 24 жовтня 2026 року
+          - paragraph [ref=f5e229]:
+            - strong [ref=f5e230]: "Час:"
+            - text: 10:00 — 19:00
+          - paragraph [ref=f5e231]:
+            - strong [ref=f5e232]: "Харчування:"
+            - text: кава та кейтеринг протягом дня
+          - paragraph [ref=f5e233]:
+            - strong [ref=f5e234]: "Маркет:"
+            - text: працює з 10:00 до 16:00
+        - link "Як дістатися" [ref=f5e235] [cursor=pointer]:
+          - /url: https://maps.google.com/?q=Mobilant+Antwerpen
+    - generic [ref=f5e240]:
+      - generic [ref=f5e241]:
+        - paragraph [ref=f5e242]: Квитки
+        - heading "Обери свій квиток на «ЛІТАЙ»" [level=2] [ref=f5e243]
+      - generic [ref=f5e244]:
+        - generic [ref=f5e245]:
+          - paragraph [ref=f5e246]: 55 €
+          - paragraph [ref=f5e247]: Перші 10 квитків
+          - text: SOLD OUT
+        - generic [ref=f5e248]:
+          - paragraph [ref=f5e249]: 75 €
+          - paragraph [ref=f5e250]: Основна вартість
+        - generic [ref=f5e251]:
+          - paragraph [ref=f5e252]: 95 €
+          - paragraph [ref=f5e253]: Фінальна вартість
+      - generic [ref=f5e254]:
+        - paragraph [ref=f5e255]: "У вартість квитка входить:"
+        - generic [ref=f5e256]:
+          - paragraph [ref=f5e257]: Участь у фестивалі протягом усього дня
+          - paragraph [ref=f5e258]: 3 майстер-класи на вибір — по одному з кожної лінійки
+          - paragraph [ref=f5e259]: Відкриття та закриття фестивалю
+          - paragraph [ref=f5e260]: Кейтеринг та кава
+          - paragraph [ref=f5e261]: Доступ до маркету й усіх загальних активностей
+          - paragraph [ref=f5e262]: Участь у розіграші подарунків
+      - paragraph [ref=f5e263]: Кількість місць обмежена — лише 60 учасників.
+      - link "Купити квиток" [ref=f5e265] [cursor=pointer]:
+        - /url: "#"
+    - generic [ref=f5e269]:
+      - generic [ref=f5e270]:
+        - paragraph [ref=f5e271]: Партнери
+        - heading "Партнери фестивалю" [level=2] [ref=f5e272]
+      - paragraph [ref=f5e274]: Інформація про партнерів буде додана найближчим часом.
+    - generic [ref=f5e276]:
+      - generic [ref=f5e277]:
+        - paragraph [ref=f5e278]: Питання — відповіді
+        - heading "Часті питання" [level=2] [ref=f5e279]
+      - generic [ref=f5e280]:
+        - generic [ref=f5e281]:
+          - button "Чи потрібно бути психологом або мати досвід участі в психологічних практиках?" [ref=f5e282] [cursor=pointer]
+          - generic: Ні. «ЛІТАЙ» відкритий для всіх, кому цікаві психологія, пізнання себе та новий досвід. Спеціальні знання чи попередня підготовка не потрібні.
+        - generic [ref=f5e286]:
+          - button "Як обрати майстер-клас?" [ref=f5e287] [cursor=pointer]
+          - generic: Перед кожною лінійкою спікери коротко представлять себе та свої майстер-класи. Також ви отримаєте програму з усіма темами, щоб легко обрати те, що найбільше відгукується.
+        - generic [ref=f5e291]:
+          - button "Чи можна прийти на фестиваль самій/самому?" [ref=f5e292] [cursor=pointer]
+          - generic: Звісно. Фестиваль створений так, щоб було легко знайомитися, спілкуватися та почуватися комфортно, навіть якщо ви прийшли самі.
+    - generic [ref=f5e297]:
+      - generic [ref=f5e298]:
+        - paragraph [ref=f5e299]: Хто створює «ЛІТАЙ»
+        - heading "Команда" [level=2] [ref=f5e300]
+      - generic [ref=f5e301]:
+        - heading "OporaSpace" [level=3] [ref=f5e302]
+        - paragraph [ref=f5e303]: Неприбуткова громадська організація в Бельгії, що створює проєкти та події для української спільноти.
+      - generic [ref=f5e304]:
+        - generic [ref=f5e305]: Валентина Тищук
+        - generic [ref=f5e306]: Яна Рега
+        - generic [ref=f5e307]: Вікторія Бойченко
+        - generic [ref=f5e308]: Ірина Макара
+        - generic [ref=f5e309]: Катерина Степаненко
+  - contentinfo [ref=f5e310]:
+    - generic [ref=f5e311]:
+      - link [ref=f5e312] [cursor=pointer]:
+        - /url: "#"
+        - img "ЛІТАЙ FEST" [ref=f5e313]
+      - navigation "Футер навігація" [ref=f5e314]:
+        - link "Про фестиваль" [ref=f5e315] [cursor=pointer]:
+          - /url: "#about"
+        - link "Програма" [ref=f5e316] [cursor=pointer]:
+          - /url: "#program"
+        - link "Учасники" [ref=f5e317] [cursor=pointer]:
+          - /url: "#speakers"
+        - link "Локація" [ref=f5e318] [cursor=pointer]:
+          - /url: "#location"
+      - generic [ref=f5e319]:
+        - link "Instagram" [ref=f5e320] [cursor=pointer]:
+          - /url: https://www.instagram.com/litay_fest
+        - link "Threads" [ref=f5e324] [cursor=pointer]:
+          - /url: https://www.threads.com/@litay_fest_be
+      - paragraph [ref=f5e329]: © 2026 ЛІТАЙ FEST

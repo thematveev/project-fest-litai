@@ -1,0 +1,2 @@
+[      44ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8080/assets/photos/hero/about.jpg:0
+[   85500ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8080/assets/photos/location/location.jpg:0
