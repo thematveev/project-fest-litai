@@ -219,7 +219,6 @@
       <nav class="header__nav" aria-label="Основна навігація">
         <a href="#about" class="header__nav-link">Про фестиваль</a>
         <a href="#program" class="header__nav-link">Програма</a>
-        <a href="#speakers" class="header__nav-link">Спікери</a>
         <a href="#tickets" class="header__nav-link">Вартість</a>
       </nav>
 
@@ -244,7 +243,6 @@
     <nav class="mobile-menu__nav" aria-label="Мобільна навігація">
       <a href="#about" class="mobile-menu__link">Про фестиваль</a>
       <a href="#program" class="mobile-menu__link">Програма</a>
-      <a href="#speakers" class="mobile-menu__link">Спікери</a>
       <a href="#tickets" class="mobile-menu__link">Вартість</a>
       <a href="#tickets" class="btn btn-primary mobile-menu__cta">Квитки</a>
     </nav>
@@ -325,6 +323,9 @@
             <button type="button" class="btn btn-outline" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
               ДІЗНАТИСЯ БІЛЬШЕ
             </button>
+            <button type="button" class="btn btn-secondary support-open-btn">
+              ПІДТРИМАТИ ПРОЕКТ
+            </button>
           </div>
           <div class="hero__tags hero-slide-up" data-delay="800">
             <span>Практики</span>
@@ -396,509 +397,373 @@
               відкритися новим знайомствам і провести день у легкій та приймаючій атмосфері.</p>
           </div>
         </div>
-
-        <div class="about__benefits reveal-stagger">
-          <div class="about__benefit">
-            <div class="about__benefit-icon">
-              <svg width="28" height="28"><use href="#icon-palette" /></svg>
-            </div>
-            <h4 class="about__benefit-title">Новий досвід</h4>
-            <p class="about__benefit-desc">Через дієві психологічні, тілесні та творчі практики — від нейрографіки до гіпнотерапії.</p>
-          </div>
-          <div class="about__benefit">
-            <div class="about__benefit-icon">
-              <svg width="28" height="28"><use href="#icon-brain" /></svg>
-            </div>
-            <h4 class="about__benefit-title">Нові відкриття про себе</h4>
-            <p class="about__benefit-desc">Через відчуття, думки та несподівані усвідомлення, які з'являються в безпечному просторі.</p>
-          </div>
-          <div class="about__benefit">
-            <div class="about__benefit-icon">
-              <svg width="28" height="28"><use href="#icon-group" /></svg>
-            </div>
-            <h4 class="about__benefit-title">Живі знайомства</h4>
-            <p class="about__benefit-desc">Легке спілкування з людьми зі схожими інтересами. Знайдіть свою спільноту.</p>
-          </div>
-          <div class="about__benefit">
-            <div class="about__benefit-icon">
-              <svg width="28" height="28"><use href="#icon-star" /></svg>
-            </div>
-            <h4 class="about__benefit-title">Свій ресурс</h4>
-            <p class="about__benefit-desc">Те, що наповнить саме вас і залишиться з вами після фестивалю — як внутрішня опора.</p>
-          </div>
-        </div>
       </div>
     </section>
 
 
-    <!-- ═══════════════ 03 — PROGRAM ═══════════════ -->
+    <!-- ═══════════════ 03 — PROGRAM · TIMELINE ═══════════════ -->
 
-    <section class="section" id="program" style="background: var(--color-white);">
+    <section class="section program" id="program">
       <div class="container">
-        <div class="section-header reveal">
+        <div class="section-header program__header reveal">
           <p class="section-header__label">Програма</p>
           <h2 class="section-header__title">Програма дня</h2>
+          <p class="section-header__desc">Один день · 3 лінійки · 12 майстер-класів. З кожної лінійки учасник обирає
+            один майстер-клас.</p>
         </div>
 
-        <div class="program__timeline reveal">
-          <div class="program__line"></div>
-
-          <div class="program__item">
-            <div class="program__marker"></div>
-            <div class="program__icon">
-              <svg width="20" height="20"><use href="#icon-coffee" /></svg>
-            </div>
-            <p class="program__time">10:00 — 10:30</p>
-            <h3 class="program__title">Реєстрація · кава · знайомство</h3>
-            <p class="program__desc">Знайомимося, п'ємо каву та занурюємося в атмосферу фестивалю.</p>
-          </div>
-
-          <div class="program__item">
-            <div class="program__marker"></div>
-            <div class="program__icon">
-              <svg width="20" height="20"><use href="#icon-feather" /></svg>
-            </div>
-            <p class="program__time">10:30 — 11:30</p>
-            <h3 class="program__title">Відкриття фестивалю</h3>
-            <p class="program__desc">Привітання від організаторів, знайомство зі спікерами та програмою дня.</p>
-          </div>
-
-          <div class="program__item">
-            <div class="program__marker"></div>
-            <div class="program__icon">
-              <svg width="20" height="20"><use href="#icon-brush" /></svg>
-            </div>
-            <p class="program__time">11:30 — 12:50</p>
-            <h3 class="program__title">I лінійка майстер-класів</h3>
-            <p class="program__desc">4 майстер-класи одночасно. Оберіть один, який найбільше відгукується.</p>
-          </div>
-
-          <div class="program__item">
-            <div class="program__marker"></div>
-            <div class="program__icon">
-              <svg width="20" height="20"><use href="#icon-coffee" /></svg>
-            </div>
-            <p class="program__time">12:50 — 14:00</p>
-            <h3 class="program__title">Обід · вільний час · маркет</h3>
-            <p class="program__desc">Насолоджуємося кейтерингом, спілкуємося та відвідуємо маркет.</p>
-          </div>
-
-          <div class="program__item">
-            <div class="program__marker"></div>
-            <div class="program__icon">
-              <svg width="20" height="20"><use href="#icon-brush" /></svg>
-            </div>
-            <p class="program__time">14:00 — 15:20</p>
-            <h3 class="program__title">II лінійка майстер-класів</h3>
-            <p class="program__desc">4 нових майстер-класи. Оберіть інший напрямок для занурення.</p>
-          </div>
-
-          <div class="program__item">
-            <div class="program__marker"></div>
-            <div class="program__icon">
-              <svg width="20" height="20"><use href="#icon-location" /></svg>
-            </div>
-            <p class="program__time">15:20 — 16:00</p>
-            <h3 class="program__title">Вільний час · маркет</h3>
-            <p class="program__desc">Час для покупок, спілкування та особистого простору.</p>
-          </div>
-
-          <div class="program__item">
-            <div class="program__marker"></div>
-            <div class="program__icon">
-              <svg width="20" height="20"><use href="#icon-brush" /></svg>
-            </div>
-            <p class="program__time">16:00 — 17:20</p>
-            <h3 class="program__title">III лінійка майстер-класів</h3>
-            <p class="program__desc">Остання лінійка. Завершуйте день тим, що надихає.</p>
-          </div>
-
-          <div class="program__item">
-            <div class="program__marker"></div>
-            <div class="program__icon">
-              <svg width="20" height="20"><use href="#icon-gift" /></svg>
-            </div>
-            <p class="program__time">17:30 — 18:40</p>
-            <h3 class="program__title">Закриття фестивалю · розіграш подарунків</h3>
-            <p class="program__desc">Підбиваємо підсумки дня та розігруємо подарунки серед учасників.</p>
-          </div>
-
-          <div class="program__item">
-            <div class="program__marker"></div>
-            <div class="program__icon">
-              <svg width="20" height="20"><use href="#icon-camera" /></svg>
-            </div>
-            <p class="program__time">18:40 — 19:00</p>
-            <h3 class="program__title">Фото · спілкування · вільне завершення</h3>
-            <p class="program__desc">Фотографуйтеся, обмінюйтеся контактами та завершуйте день у теплій атмосфері.</p>
-          </div>
-        </div>
-
-        <div class="quote reveal" style="margin-top: var(--space-8);">
-          Маркет працює з 10:00 до 16:00. Кава та кейтеринг протягом дня. Фото та інтерактиви для спогадів.
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ═══════════════ 04 — MASTERCLASSES ═══════════════ -->
-
-    <section class="section" id="masterclasses">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="section-header__label">Майстер-класи</p>
-          <h2 class="section-header__title">3 лінійки · 12 майстер-класів</h2>
-          <p class="section-header__desc">У кожній лінійці одночасно відбуваються 4 майстер-класи. Учасник обирає один
-            майстер-клас із кожної лінійки.</p>
-        </div>
-
-        <div class="masterclasses__tabs reveal">
-          <button class="masterclasses__tab is-active" data-tab="0">I лінійка · 11:30</button>
-          <button class="masterclasses__tab" data-tab="1">II лінійка · 14:00</button>
-          <button class="masterclasses__tab" data-tab="2">III лінійка · 16:00</button>
-        </div>
-
-        <!-- Tab 1 -->
-        <div class="masterclasses__panel is-active" data-panel="0">
-          <div class="masterclasses__grid reveal-stagger">
-            <div class="mk-card">
-              <p class="mk-card__speaker">Катерина Степаненко</p>
-              <h3 class="mk-card__title">Між бажанням та дією: що заважає нам втілювати свої наміри в життя</h3>
-              <p class="mk-card__desc">Чому ми можемо добре знати, чого хочемо, але знову відкладати перший крок? На
-                майстер-класі учасники досліджуватимуть, що саме стоїть між бажанням і дією.</p>
-            </div>
-            <div class="mk-card">
-              <p class="mk-card__speaker">Олена Дудченко</p>
-              <h3 class="mk-card__title">Арттерапія з глиною «Відчуй свої крила»</h3>
-              <p class="mk-card__desc">Творча практика з глиною для дослідження внутрішнього стану через дотик і форму.
-              </p>
-            </div>
-            <div class="mk-card">
-              <p class="mk-card__speaker">Катерина Міхалькевіч</p>
-              <h3 class="mk-card__title">Тіло памʼятає шлях до гармонії</h3>
-              <p class="mk-card__desc">Тілесні практики зі звукотерапією чашами. Через рух, дихання та звучання чаш
-                учасники зможуть сповільнитися та дослідити власний стан через тіло.</p>
-            </div>
-            <div class="mk-card">
-              <p class="mk-card__speaker">Ольга Тріфонова</p>
-              <h3 class="mk-card__title">Групова гіпнотерапевтична практика «Мені можна» + мандала наміру</h3>
-              <p class="mk-card__desc">Практика про внутрішні заборони та переконання. Через сфокусовану увагу учасники
-                помітять власні «не можна» та створять мандалу наміру.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 2 -->
-        <div class="masterclasses__panel" data-panel="1">
-          <div class="masterclasses__grid reveal-stagger">
-            <div class="mk-card">
-              <p class="mk-card__speaker">Маша Плохута</p>
-              <h3 class="mk-card__title">Інтуїтивне малювання</h3>
-              <p class="mk-card__desc">Авторська техніка інтуїтивного малювання з використанням абстрактних метафоричних
-                карток. Для участі не потрібен художній досвід.</p>
-            </div>
-            <div class="mk-card">
-              <p class="mk-card__speaker">Валентина Тищук</p>
-              <h3 class="mk-card__title">Тіньові сторони сексуальності / архетипи</h3>
-              <p class="mk-card__desc">Практика з МАК для дослідження архетипів та тіньових сторін.</p>
-            </div>
-            <div class="mk-card">
-              <p class="mk-card__speaker">Юлія Губарєва</p>
-              <h3 class="mk-card__title">Психологічна гра «Формула удачі»</h3>
-              <p class="mk-card__desc">Гра про пошук власної формули щастя. Учасники досліджуватимуть, що насправді
-                робить їхнє життя наповненим.</p>
-            </div>
-            <div class="mk-card">
-              <p class="mk-card__speaker">Еліна Олексієнко</p>
-              <h3 class="mk-card__title">Майстер-клас із нейрографіки</h3>
-              <p class="mk-card__desc">Нейрографіка — творчий метод, який через малювання допомагає подивитися на свій
-                запит з іншого боку та знайти нові рішення.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 3 -->
-        <div class="masterclasses__panel" data-panel="2">
-          <div class="masterclasses__grid reveal-stagger">
-            <div class="mk-card">
-              <p class="mk-card__speaker">Світлана Коркіна</p>
-              <h3 class="mk-card__title">Тілесна практика «Стихії всередині тебе»</h3>
-              <p class="mk-card__desc">Наші емоції живуть не лише в думках — тіло також відчуває, зберігає та виражає їх. Через вільний рух і танець учасники досліджуватимуть свої внутрішні стани через образи різних стихій.</p>
-            </div>
-            <div class="mk-card">
-              <p class="mk-card__speaker">Ірина Макара</p>
-              <h3 class="mk-card__title">«Пташки» — творчий майстер-клас зі створення свічок</h3>
-              <p class="mk-card__desc">Творчий процес створення свічок як медитативна практика.</p>
-            </div>
-            <div class="mk-card">
-              <p class="mk-card__speaker">Людмила Сисоєва</p>
-              <h3 class="mk-card__title">Подорож Героїні. Подорож у світ своєї сили</h3>
-              <p class="mk-card__desc">Запрошення у подорож до себе — своєї сили, свободи та нових можливостей.</p>
-            </div>
-            <div class="mk-card">
-              <p class="mk-card__speaker">Лія Петренко</p>
-              <h3 class="mk-card__title">Казкотерапія «Навіщо дорослим казки?»</h3>
-              <p class="mk-card__desc">Казки — не лише для дітей. Через образи, символи та сюжети можна побачити знайомі
-                ситуації з іншого боку.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ═══════════════ 05 — SPEAKERS ═══════════════ -->
-
-    <section class="section" id="speakers" style="background: var(--color-white);">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="section-header__label">Учасники</p>
-          <h2 class="section-header__title">Спікери фестивалю</h2>
-        </div>
-
-        <div class="speakers__grid reveal-stagger">
+        <div class="tl reveal-stagger">
 
           <!-- 1 -->
-          <div class="speakers__card">
-            <img src="assets/photos/speakers/speaker-1.jpg" alt="Катерина Степаненко" class="speakers__photo"
-              loading="lazy">
-            <div class="speakers__info">
-              <h3 class="speakers__name">Катерина Степаненко</h3>
-              <p class="speakers__role">Психологиня · акредитована когнітивно-поведінкова терапевтка · фахівчиня з
-                гештальт- та схема-терапії</p>
-            </div>
-            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
-            <div class="speakers__bio">
-              <p>Засновниця Центру когнітивної терапії Psyhol, авторка та ведуча психологічних ретритів Step to Self.
-                Працює з когнітивно-поведінковим, гештальт- та схема-терапевтичним підходами, перебуває на шляху до
-                акредитації в схема-терапії.</p>
-              <p style="margin-top: 12px;"><em>Майстер-клас «Між бажанням та дією: що заважає нам втілювати свої наміри
-                  в життя»</em></p>
-              <p style="margin-top: 8px;">Чому ми можемо добре знати, чого хочемо, але знову відкладати перший крок?
-                Чому одні наміри переходять у дії, а інші так і залишаються планами?</p>
-              <p style="margin-top: 8px;">На майстер-класі учасники досліджуватимуть, що саме стоїть між бажанням і
-                дією, які внутрішні механізми можуть нас зупиняти та що допомагає перейти від наміру до реальних кроків.
-              </p>
-            </div>
-          </div>
+          <article class="tl__event">
+            <span class="tl__dot" aria-hidden="true"></span>
+            <p class="tl__time">10:00 — 10:30</p>
+            <h3 class="tl__title">Реєстрація · кава · знайомство</h3>
+            <p class="tl__desc">Знайомимося, п'ємо каву та занурюємося в атмосферу фестивалю.</p>
+          </article>
 
           <!-- 2 -->
-          <div class="speakers__card speakers__tba">
-            <div class="speakers__photo"
-              style="display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--color-gray-500);">
-              Очікується</div>
-            <div class="speakers__info">
-              <h3 class="speakers__name">Олена Дудченко</h3>
-              <p class="speakers__role">Арттерапевтка</p>
-            </div>
-          </div>
+          <article class="tl__event">
+            <span class="tl__dot" aria-hidden="true"></span>
+            <p class="tl__time">10:30 — 11:15</p>
+            <h3 class="tl__title">Відкриття фестивалю</h3>
+            <p class="tl__desc">Привітання від організаторів, знайомство зі спікерами та програмою дня.</p>
+          </article>
 
-          <!-- 3 -->
-          <div class="speakers__card">
-            <img src="assets/photos/speakers/speaker-3.jpg" alt="Катерина Міхалькевіч" class="speakers__photo"
-              loading="lazy">
-            <div class="speakers__info">
-              <h3 class="speakers__name">Катерина Міхалькевіч</h3>
-              <p class="speakers__role">Викладачка кундаліні-йоги · коуч · засновниця Innerlijk Kompas</p>
+          <!-- 3 · I лінійка -->
+          <article class="tl__event tl__event--track">
+            <span class="tl__dot" aria-hidden="true"></span>
+            <p class="tl__time">11:30 — 12:50</p>
+            <h3 class="tl__title">I лінійка майстер-класів</h3>
+            <p class="tl__desc">4 майстер-класи одночасно. Оберіть один, який найбільше відгукується.</p>
+
+            <div class="tl__row">
+              <div class="tl-card">
+                <div class="tl-card__photo">
+                  <img src="assets/photos/speakers/speaker-1.jpg" alt="Катерина Степаненко" loading="lazy" style="--photo-pos: 50% 68%">
+                </div>
+                <div class="tl-card__body">
+                  <p class="tl-card__speaker">Катерина Степаненко</p>
+                  <h4 class="tl-card__title">Між бажанням та дією: що заважає нам втілювати свої наміри в життя</h4>
+                  <p class="tl-card__desc">Чому ми можемо добре знати, чого хочемо, але знову відкладати перший крок? На
+                    майстер-класі учасники досліджуватимуть, що саме стоїть між бажанням і дією.</p>
+                </div>
+              </div>
+
+              <div class="tl-card">
+                <div class="tl-card__photo tl-card__photo--tba">Очікується</div>
+                <div class="tl-card__body">
+                  <p class="tl-card__speaker">Олена Дудченко</p>
+                  <h4 class="tl-card__title">Арттерапія з глиною «Відчуй свої крила»</h4>
+                  <p class="tl-card__desc">Творча практика з глиною для дослідження внутрішнього стану через дотик і
+                    форму.</p>
+                </div>
+              </div>
+
+              <div class="tl-card">
+                <div class="tl-card__photo">
+                  <img src="assets/photos/speakers/speaker-3.jpg" alt="Катерина Міхалькевіч" loading="lazy" style="--photo-pos: 50% 18%">
+                </div>
+                <div class="tl-card__body">
+                  <p class="tl-card__speaker">Катерина Міхалькевіч</p>
+                  <h4 class="tl-card__title">Тіло памʼятає шлях до гармонії</h4>
+                  <p class="tl-card__desc">Тілесні практики зі звукотерапією чашами. Через рух, дихання та звучання чаш
+                    учасники зможуть сповільнитися та дослідити власний стан через тіло.</p>
+                </div>
+              </div>
+
+              <div class="tl-card">
+                <div class="tl-card__photo">
+                  <img src="assets/photos/speakers/speaker-4.jpg" alt="Ольга Тріфонова" loading="lazy" style="--photo-pos: 50% 67%">
+                </div>
+                <div class="tl-card__body">
+                  <p class="tl-card__speaker">Ольга Тріфонова</p>
+                  <h4 class="tl-card__title">Групова гіпнотерапевтична практика «Мені можна» + мандала наміру</h4>
+                  <p class="tl-card__desc">Практика про внутрішні заборони та переконання. Через сфокусовану увагу
+                    учасники помітять власні «не можна» та створять мандалу наміру.</p>
+                </div>
+              </div>
             </div>
-            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
-            <div class="speakers__bio">
-              <p>Допомагає через роботу з тілом, диханням, увагою та емоціями знаходити внутрішню опору, ясність і краще
-                керувати своїм станом у мінливому світі.</p>
-              <p style="margin-top: 12px;"><em>«Тіло памʼятає шлях до гармонії» — Тілесні практики зі звукотерапією
-                  чашами</em></p>
-              <p style="margin-top: 8px;">Практика, де через рух, дихання, увагу до тіла та звучання чаш учасники
-                зможуть сповільнитися, переключити увагу із зовнішнього на себе та дослідити власний стан через тіло.
-              </p>
-              <p style="margin-top: 8px;">«Не потрібно чекати, поки життя стане спокійнішим, щоб нарешті відчути себе
-                добре».</p>
-            </div>
-          </div>
+          </article>
 
           <!-- 4 -->
-          <div class="speakers__card">
-            <img src="assets/photos/speakers/speaker-4.jpg" alt="Ольга Тріфонова" class="speakers__photo"
-              loading="lazy">
-            <div class="speakers__info">
-              <h3 class="speakers__name">Ольга Тріфонова</h3>
-              <p class="speakers__role">Практикуюча психологиня · EMDR-терапевтка · гіпнотерапевтка</p>
-            </div>
-            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
-            <div class="speakers__bio">
-              <p>Працює в мультимодальному підході, поєднуючи EMDR, гіпнотерапію, когнітивно-поведінкову та арттерапію.
-                Допомагає працювати з емоціями, внутрішніми переконаннями та реакціями, які не завжди вдається змінити
-                лише через логічне осмислення.</p>
-              <p style="margin-top: 12px;"><em>Групова гіпнотерапевтична практика «Мені можна»</em></p>
-              <p style="margin-top: 8px;">Практика про внутрішні заборони та переконання, які колись могли допомагати й
-                захищати, але сьогодні вже обмежують.</p>
-              <p style="margin-top: 8px;">Через сфокусовану увагу учасники спробують помітити власні внутрішні «не
-                можна», дослідити їх та дати місце новим можливостям і дозволам.</p>
-              <p style="margin-top: 8px;">У другій частині майстер-класу кожен створить власну мандалу наміру —
-                особистий візерунок, що символізуватиме звільнення від внутрішніх блоків і те нове, що хочеться
-                дозволити собі.</p>
-            </div>
-          </div>
+          <article class="tl__event">
+            <span class="tl__dot" aria-hidden="true"></span>
+            <p class="tl__time">12:50 — 13:35</p>
+            <h3 class="tl__title">Обід · маркет</h3>
+            <p class="tl__desc">Насолоджуємося кейтерингом, спілкуємося та відвідуємо маркет.</p>
+          </article>
 
-          <!-- 5 -->
-          <div class="speakers__card">
-            <img src="assets/photos/speakers/speaker-5.jpg" alt="Маша Плохута" class="speakers__photo" loading="lazy">
-            <div class="speakers__info">
-              <h3 class="speakers__name">Маша Плохута</h3>
-              <p class="speakers__role">Мультидисциплінарна художниця · дизайнерка · арттерапевтка</p>
+          <!-- 5 · II лінійка -->
+          <article class="tl__event tl__event--track">
+            <span class="tl__dot" aria-hidden="true"></span>
+            <p class="tl__time">14:00 — 15:20</p>
+            <h3 class="tl__title">II лінійка майстер-класів</h3>
+            <p class="tl__desc">4 нових майстер-класи. Оберіть інший напрямок для занурення.</p>
+
+            <div class="tl__row">
+              <div class="tl-card">
+                <div class="tl-card__photo">
+                  <img src="assets/photos/speakers/speaker-5.jpg" alt="Маша Плохута" loading="lazy" style="--photo-pos: 50% 33%">
+                </div>
+                <div class="tl-card__body">
+                  <p class="tl-card__speaker">Маша Плохута</p>
+                  <h4 class="tl-card__title">Інтуїтивне малювання</h4>
+                  <p class="tl-card__desc">Авторська техніка інтуїтивного малювання з використанням абстрактних
+                    метафоричних карток. Для участі не потрібен художній досвід.</p>
+                </div>
+              </div>
+
+              <div class="tl-card">
+                <div class="tl-card__photo">
+                  <img src="assets/photos/speakers/speaker-6.jpg" alt="Валентина Тищук" loading="lazy" style="--photo-pos: 50% 31%">
+                </div>
+                <div class="tl-card__body">
+                  <p class="tl-card__speaker">Валентина Тищук</p>
+                  <h4 class="tl-card__title">Тіньові сторони сексуальності / архетипи</h4>
+                  <p class="tl-card__desc">Практика з МАК для дослідження архетипів та тіньових сторін.</p>
+                </div>
+              </div>
+
+              <div class="tl-card">
+                <div class="tl-card__photo">
+                  <img src="assets/photos/speakers/speaker-7.jpg" alt="Юлія Губарєва" loading="lazy" style="--photo-pos: 50% 26%">
+                </div>
+                <div class="tl-card__body">
+                  <p class="tl-card__speaker">Юлія Губарєва</p>
+                  <h4 class="tl-card__title">Психологічна гра «Формула удачі»</h4>
+                  <p class="tl-card__desc">Гра про пошук власної формули щастя. Учасники досліджуватимуть, що насправді
+                    робить їхнє життя наповненим.</p>
+                </div>
+              </div>
+
+              <div class="tl-card">
+                <div class="tl-card__photo">
+                  <img src="assets/photos/speakers/speaker-8.jpg" alt="Еліна Олексієнко" loading="lazy" style="--photo-pos: 50% 33%">
+                </div>
+                <div class="tl-card__body">
+                  <p class="tl-card__speaker">Еліна Олексієнко</p>
+                  <h4 class="tl-card__title">Майстер-клас із нейрографіки</h4>
+                  <p class="tl-card__desc">Нейрографіка — творчий метод, який через малювання допомагає подивитися на
+                    свій запит з іншого боку та знайти нові рішення.</p>
+                </div>
+              </div>
             </div>
-            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
-            <div class="speakers__bio">
-              <p>Маша працює з мікс-медіа та інтуїтивним мистецтвом, досліджуючи внутрішній світ людини через творчість,
-                колір та абстрактні форми.</p>
-              <p style="margin-top: 12px;"><em>Майстер-клас «Інтуїтивне малювання»</em></p>
-              <p style="margin-top: 8px;">На майстер-класі учасники спробують авторську техніку інтуїтивного малювання з
-                використанням створених Машею абстрактних метафоричних карток.</p>
-              <p style="margin-top: 8px;">Через колір, лінії та форми можна буде досліджувати власні відчуття,
-                довіритися інтуїції та створити свою роботу без правил і необхідності вміти малювати.</p>
-              <p style="margin-top: 8px;">Для участі не потрібен художній досвід.</p>
-            </div>
-          </div>
+          </article>
 
           <!-- 6 -->
-          <div class="speakers__card">
-            <img src="assets/photos/speakers/speaker-6.jpg" alt="Валентина Тищук" class="speakers__photo"
-              loading="lazy">
-            <div class="speakers__info">
-              <h3 class="speakers__name">Валентина Тищук</h3>
-              <p class="speakers__role">Психологиня · практикиня МАК</p>
-            </div>
-            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
-            <div class="speakers__bio">
-              <p><em>«Тіньові сторони сексуальності / архетипи» — Практика з МАК</em></p>
-              <p style="margin-top: 8px;">Практика з метафоричними асоціативними картками для дослідження архетипів та тіньових сторін.</p>
-            </div>
-          </div>
+          <article class="tl__event">
+            <span class="tl__dot" aria-hidden="true"></span>
+            <p class="tl__time">15:20 — 15:40</p>
+            <h3 class="tl__title">Кава-пауза</h3>
+            <p class="tl__desc">Кава, легкі снеки та час на знайомства.</p>
+          </article>
 
-          <!-- 7 -->
-          <div class="speakers__card">
-            <img src="assets/photos/speakers/speaker-7.jpg" alt="Юлія Губарєва" class="speakers__photo" loading="lazy">
-            <div class="speakers__info">
-              <h3 class="speakers__name">Юлія Губарєва</h3>
-              <p class="speakers__role">Магістр психології · ігропрактик · арттерапевтка · авторка психологічних ігор і
-                МАК-карт</p>
+          <!-- 7 · III лінійка -->
+          <article class="tl__event tl__event--track">
+            <span class="tl__dot" aria-hidden="true"></span>
+            <p class="tl__time">16:00 — 17:20</p>
+            <h3 class="tl__title">III лінійка майстер-класів</h3>
+            <p class="tl__desc">Остання лінійка. Завершуйте день тим, що надихає.</p>
+
+            <div class="tl__row">
+              <div class="tl-card">
+                <div class="tl-card__photo">
+                  <img src="assets/photos/speakers/speaker-9.jpg" alt="Світлана Коркіна" loading="lazy" style="--photo-pos: 50% 24%">
+                </div>
+                <div class="tl-card__body">
+                  <p class="tl-card__speaker">Світлана Коркіна</p>
+                  <h4 class="tl-card__title">Тілесна практика «Стихії всередині тебе»</h4>
+                  <p class="tl-card__desc">Наші емоції живуть не лише в думках — тіло також відчуває, зберігає та
+                    виражає їх. Через вільний рух і танець учасники досліджуватимуть свої внутрішні стани.</p>
+                </div>
+              </div>
+
+              <div class="tl-card">
+                <div class="tl-card__photo">
+                  <img src="assets/photos/speakers/speaker-10.jpg" alt="Ірина Макара" loading="lazy" style="--photo-pos: 50% 73%">
+                </div>
+                <div class="tl-card__body">
+                  <p class="tl-card__speaker">Ірина Макара</p>
+                  <h4 class="tl-card__title">«Пташки» — творчий майстер-клас зі створення свічок</h4>
+                  <p class="tl-card__desc">Творчий процес створення свічок як медитативна практика.</p>
+                </div>
+              </div>
+
+              <div class="tl-card">
+                <div class="tl-card__photo">
+                  <img src="assets/photos/speakers/speaker-11.jpg" alt="Людмила Сисоєва" loading="lazy" style="--photo-pos: 50% 11%">
+                </div>
+                <div class="tl-card__body">
+                  <p class="tl-card__speaker">Людмила Сисоєва</p>
+                  <h4 class="tl-card__title">Подорож Героїні. Подорож у світ своєї сили</h4>
+                  <p class="tl-card__desc">Запрошення у подорож до себе — своєї сили, свободи та нових можливостей.</p>
+                </div>
+              </div>
+
+              <div class="tl-card">
+                <div class="tl-card__photo">
+                  <img src="assets/photos/speakers/speaker-12.jpg" alt="Лія Петренко" loading="lazy" style="--photo-pos: 50% 19%">
+                </div>
+                <div class="tl-card__body">
+                  <p class="tl-card__speaker">Лія Петренко</p>
+                  <h4 class="tl-card__title">Казкотерапія «Навіщо дорослим казки?»</h4>
+                  <p class="tl-card__desc">Казки — не лише для дітей. Через образи, символи та сюжети можна побачити
+                    знайомі ситуації з іншого боку.</p>
+                </div>
+              </div>
             </div>
-            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
-            <div class="speakers__bio">
-              <p>Засновниця та власниця Little HeARTs — простору для мам і дітей у міграції. Створює психологічні
-                інструменти, які через гру, образи та творчість допомагають краще розуміти себе, свої бажання й
-                внутрішні ресурси.</p>
-              <p style="margin-top: 12px;"><em>Психологічна гра «Формула удачі»</em></p>
-              <p style="margin-top: 8px;">Гра про пошук власної формули щастя. Учасники досліджуватимуть, що насправді
-                робить їхнє життя наповненим, чого вони хочуть і які ресурси вже мають для руху до бажаного.</p>
-              <p style="margin-top: 8px;">Через гру можна буде краще почути себе, визначити важливі життєві орієнтири та
-                перетворити свої бажання на конкретні кроки, з яких можна почати вже зараз.</p>
-            </div>
-          </div>
+          </article>
 
           <!-- 8 -->
-          <div class="speakers__card">
-            <img src="assets/photos/speakers/speaker-8.jpg" alt="Еліна Олексієнко" class="speakers__photo"
-              loading="lazy">
-            <div class="speakers__info">
-              <h3 class="speakers__name">Еліна Олексієнко</h3>
-              <p class="speakers__role">Коуч · інструкторка з нейрографіки та МАК</p>
-            </div>
-            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
-            <div class="speakers__bio">
-              <p>Працює індивідуально та з групами понад 4 роки, проводить жіночі зустрічі та брала участь як ведуча у
-                жіночих ретритах. У своїй роботі допомагає побачити нові можливості та знайти власні відповіді через
-                творчі практики.</p>
-              <p style="margin-top: 12px;"><em>Майстер-клас із нейрографіки</em></p>
-              <p style="margin-top: 8px;">Нейрографіка — творчий метод, який через малювання допомагає подивитися на
-                свій запит з іншого боку, дослідити думки й переживання та знайти нові рішення.</p>
-              <p style="margin-top: 8px;">На майстер-класі учасники познайомляться з основними елементами й принципами
-                нейрографіки та одразу спробують метод на практиці, створивши власний малюнок.</p>
-              <p style="margin-top: 8px;">Практика може бути особливо цікавою тим, хто шукає новий погляд на ситуацію,
-                внутрішні відповіді, ресурс та простір для творчого дослідження себе.</p>
-            </div>
-          </div>
+          <article class="tl__event">
+            <span class="tl__dot" aria-hidden="true"></span>
+            <p class="tl__time">17:30 — 18:40</p>
+            <h3 class="tl__title">Завершення фестивалю</h3>
+            <p class="tl__desc">Підбиваємо підсумки дня та розігруємо подарунки серед учасників.</p>
+          </article>
 
-          <!-- 9 -->
-          <div class="speakers__card">
-            <img src="assets/photos/speakers/speaker-9.jpg" alt="Світлана Коркіна" class="speakers__photo"
-              loading="lazy">
-            <div class="speakers__info">
-              <h3 class="speakers__name">Світлана Коркіна</h3>
-              <p class="speakers__role">Психологиня · Членкиня Міжнародної асоціації емоційно-фокусованих терапевтів</p>
-            </div>
-            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
-            <div class="speakers__bio">
-              <p>Психологиня, Членкиня Міжнародної асоціації емоційно-фокусованих терапевтів. Має понад 16 років досвіду роботи з тілом через вільний рух і танець, поєднуючи психологічний погляд із тілесним досвідом.</p>
-              <p style="margin-top: 12px;"><em>Тілесна практика «Стихії всередині тебе»</em></p>
-              <p style="margin-top: 8px;">Наші емоції живуть не лише в думках — тіло також відчуває, зберігає та виражає їх.</p>
-              <p style="margin-top: 8px;">Через вільний рух і танець учасники досліджуватимуть свої внутрішні стани через образи різних стихій, помічаючи, як емоції проявляються в тілі та як змінюються, коли ми дозволяємо їм вивільнятися через рух.</p>
-              <p style="margin-top: 8px;">Це практика де немає правильних рухів і необхідності вміти танцювати — кожна учасниця створить свій особливий простір, де можна відчути свободу і дати тілу можливість звільнитися від напруги прихованих емоцій.</p>
-            </div>
-          </div>
+        </div>
 
-          <!-- 10 -->
-          <div class="speakers__card">
-            <img src="assets/photos/speakers/speaker-10.jpg" alt="Ірина Макара" class="speakers__photo"
-              loading="lazy">
-            <div class="speakers__info">
-              <h3 class="speakers__name">Ірина Макара</h3>
-              <p class="speakers__role">Організаторка · майстриня</p>
-            </div>
-            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
-            <div class="speakers__bio">
-              <p>Організаторка фестивалю «ЛІТАЙ» та майстриня створення свічок.</p>
-              <p style="margin-top: 12px;"><em>«Пташки» — творчий майстер-клас зі створення свічок</em></p>
-              <p style="margin-top: 8px;">Творчий процес створення свічок як медитативна практика.</p>
-            </div>
-          </div>
+        <div class="quote program__note reveal">
+          Маркет працює з 10:00 до 16:00. Кава та кейтеринг протягом дня. Фото та інтерактиви для спогадів.
+        </div>
 
-          <!-- 11 -->
-          <div class="speakers__card">
-            <img src="assets/photos/speakers/speaker-11.jpg" alt="Людмила Сисоєва" class="speakers__photo"
-              loading="lazy">
-            <div class="speakers__info">
-              <h3 class="speakers__name">Людмила Сисоєва</h3>
-              <p class="speakers__role">Клінічна психологиня · травматерапевтка · тілесна терапевтка · доула</p>
-            </div>
-            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
-            <div class="speakers__bio">
-              <p>Понад 20 років працює з жінками, парами та сім'ями, супроводжуючи їх у періоди змін, криз і важливих
-                життєвих переходів. Мама п'ятьох дітей.</p>
-              <p style="margin-top: 12px;"><em>Практичний майстер-клас «Подорож Героїні. Подорож у світ своєї сили»</em>
-              </p>
-              <p style="margin-top: 8px;">Це запрошення у подорож до себе — своєї сили, свободи та нових можливостей.
-              </p>
-              <p style="margin-top: 8px;">Через практичну роботу учасниці зможуть звернутися до власного досвіду,
-                побачити внутрішні опори та дослідити, що вже є всередині для наступного етапу життя.</p>
-            </div>
-          </div>
-
-          <!-- 12 -->
-          <div class="speakers__card">
-            <img src="assets/photos/speakers/speaker-12.jpg" alt="Лія Петренко" class="speakers__photo" loading="lazy">
-            <div class="speakers__info">
-              <h3 class="speakers__name">Лія Петренко</h3>
-              <p class="speakers__role">Коуч-психологиня · 5 років практичного досвіду</p>
-            </div>
-            <button class="speakers__toggle" aria-expanded="false">Детальніше</button>
-            <div class="speakers__bio">
-              <p>У своїй роботі допомагає досліджувати себе, власні переживання та життєві ситуації через психологічні й
-                творчі підходи.</p>
-              <p style="margin-top: 12px;"><em>Майстер-клас із казкотерапії «Навіщо дорослим казки?»</em></p>
-              <p style="margin-top: 8px;">Казки — не лише для дітей. Через образи, символи та сюжети вони можуть
-                допомогти побачити знайомі життєві ситуації з іншого боку та краще почути себе.</p>
-              <p style="margin-top: 8px;">На майстер-класі учасники познайомляться з казкотерапією та спробують
-                дослідити власну історію через світ казки й метафори.</p>
-            </div>
-          </div>
-
+        <div class="program__cta reveal">
+          <button type="button" class="btn btn-primary ticket-open-btn">
+            Забронювати місце
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </button>
+          <button type="button" class="btn btn-secondary support-open-btn">
+            Підтримати проект
+          </button>
         </div>
       </div>
     </section>
 
 
-    <!-- ═══════════════ 06 — VALUES ═══════════════ -->
+    <!-- ═══════════════ 04 — ЧИ ПОТРІБНО БУТИ ПСИХОЛОГОМ ═══════════════ -->
 
+    <section class="section psych" id="need-psych" style="background: var(--color-white);">
+      <div class="container">
+        <div class="section-header psych__header reveal">
+          <p class="section-header__label">Відповідь на головне питання</p>
+          <h2 class="section-header__title">Чи потрібно бути психологом?</h2>
+        </div>
+
+        <div class="psych__answer reveal">
+          <p class="psych__lead">Ні. Зовсім не потрібно.</p>
+          <p class="psych__text">«ЛІТАЙ» — ресурсний фестиваль, а не навчання чи терапія. Ми говоримо простою мовою,
+            через практики, живі розмови та досвід інших людей. Психологічна освіта, досвід у терапії чи підготовка
+            не потрібні — достатньо цікавості до себе та бажання провести день серед своїх.</p>
+        </div>
+
+        <div class="psych__points reveal-stagger">
+          <div class="psych__point">
+            <p class="psych__num">01</p>
+            <h3 class="psych__point-title">Без спеціальної підготовки</h3>
+            <p class="psych__point-text">Майстер-класи побудовані практично: без термінів, складної теорії та
+              академічних лекцій. Усе, що потрібно, — бути присутнім.</p>
+          </div>
+          <div class="psych__point">
+            <p class="psych__num">02</p>
+            <h3 class="psych__point-title">Це про відпочинок, а не діагностику</h3>
+            <p class="psych__point-text">Фестиваль — не терапія і не консультація. Тут можна відпочити, наповнитися,
+              познайомитися з людьми та почути себе.</p>
+          </div>
+          <div class="psych__point">
+            <p class="psych__num">03</p>
+            <h3 class="psych__point-title">Свій формат участі обираєте ви</h3>
+            <p class="psych__point-text">Брати активну участь, слухати чи просто спостерігати — як вам комфортно.
+              Один майстер-клас з кожної лінійки, решта дня у вашому ритмі.</p>
+          </div>
+        </div>
+
+        <div class="quote psych__note reveal">
+          Якщо ви колись думали «це не для мене» — це саме для вас.
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ 05 — TEAM ═══════════════ -->
+
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-header__label">Хто створює «ЛІТАЙ»</p>
+          <h2 class="section-header__title">Команда</h2>
+        </div>
+
+        <div class="team__org reveal">
+          <div class="team__org-icon">
+            <svg width="28" height="28"><use href="#icon-home" /></svg>
+          </div>
+          <h3 class="team__org-name">OporaSpace</h3>
+          <p class="team__org-desc">Неприбуткова громадська організація в Бельгії, що створює проєкти та події для
+            української спільноти. Ми віримо, що разом ми сильніші.</p>
+        </div>
+
+        <div class="team__members reveal-stagger">
+          <div class="team__card">
+            <img src="assets/photos/speakers/speaker-1.jpg" alt="Катерина Степаненко" class="team__photo" loading="lazy">
+            <p class="team__name">Катерина Степаненко</p>
+          </div>
+          <div class="team__card">
+            <div class="team__photo team__photo--placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </div>
+            <p class="team__name">Яна Рега</p>
+          </div>
+          <div class="team__card">
+            <div class="team__photo team__photo--placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </div>
+            <p class="team__name">Вікторія Бойченко</p>
+          </div>
+          <div class="team__card">
+            <img src="assets/photos/speakers/speaker-10.jpg" alt="Ірина Макара" class="team__photo" loading="lazy">
+            <p class="team__name">Ірина Макара</p>
+          </div>
+          <div class="team__card">
+            <img src="assets/photos/speakers/speaker-6.jpg" alt="Валентина Тищук" class="team__photo" loading="lazy">
+            <p class="team__name">Валентина Тищук</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ 06 — PARTNERS ═══════════════ -->
+
+    <section class="section" id="partners">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-header__label">Партнери</p>
+          <h2 class="section-header__title">Партнери фестивалю</h2>
+        </div>
+        <div class="partners__placeholder reveal">
+          <div class="partners__placeholder-icon">
+            <svg width="32" height="32"><use href="#icon-heart" /></svg>
+          </div>
+          <p>Інформація про партнерів буде додана найближчим часом.</p>
+          <p class="partners__placeholder-sub">Якщо ви хочете стати партнером фестивалю — зв'яжіться з нами.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ 07 — VALUES ═══════════════ -->
     <section class="section" id="values">
       <!-- Olive branch decoration — left -->
       <div class="olive-branch olive-branch--values-left" aria-hidden="true">
@@ -984,7 +849,7 @@
     </section>
 
 
-    <!-- ═══════════════ 07 — LOCATION ═══════════════ -->
+    <!-- ═══════════════ 08 — LOCATION ═══════════════ -->
 
     <section class="section" id="location" style="background: var(--color-white);">
       <!-- Olive branch decoration -->
@@ -1063,7 +928,7 @@
     </section>
 
 
-    <!-- ═══════════════ 08 — TICKETS ═══════════════ -->
+    <!-- ═══════════════ 09 — TICKETS ═══════════════ -->
 
     <section class="section tickets" id="tickets">
       <!-- Olive branch decoration — top -->
@@ -1116,281 +981,68 @@
           <h2 class="section-header__title" style="color: var(--color-white);">Обери свій квиток на «ЛІТАЙ»</h2>
         </div>
 
-        <div class="tickets__stages reveal-stagger">
-          <div class="tickets__stage is-sold-out">
-            <p class="tickets__price">55 &euro;</p>
-            <p class="tickets__stage-desc">Перші 10 квитків</p>
-          </div>
-          <div class="tickets__stage is-current">
-            <p class="tickets__price">75 &euro;</p>
-            <p class="tickets__stage-desc">Основна вартість</p>
-          </div>
-          <div class="tickets__stage">
-            <p class="tickets__price">95 &euro;</p>
-            <p class="tickets__stage-desc">Фінальна вартість</p>
-          </div>
-        </div>
+        <div class="tickets__body">
+          <div class="tickets__offer reveal">
+            <div class="tickets__stages">
+              <div class="tickets__stage is-current">
+                <p class="tickets__price">75 &euro;</p>
+                <p class="tickets__stage-desc">Вартість квитка</p>
+              </div>
+            </div>
 
-        <div class="tickets__includes reveal">
-          <p class="tickets__includes-title">У вартість квитка входить:</p>
-          <div class="tickets__includes-list">
-            <p class="tickets__includes-item">
-              <svg class="tickets__check-icon" width="16" height="16"><use href="#icon-check" /></svg>
-              Участь у фестивалі протягом усього дня
-            </p>
-            <p class="tickets__includes-item">
-              <svg class="tickets__check-icon" width="16" height="16"><use href="#icon-check" /></svg>
-              3 майстер-класи на вибір — по одному з кожної лінійки
-            </p>
-            <p class="tickets__includes-item">
-              <svg class="tickets__check-icon" width="16" height="16"><use href="#icon-check" /></svg>
-              Відкриття та закриття фестивалю
-            </p>
-            <p class="tickets__includes-item">
-              <svg class="tickets__check-icon" width="16" height="16"><use href="#icon-check" /></svg>
-              Кейтеринг та кава
-            </p>
-            <p class="tickets__includes-item">
-              <svg class="tickets__check-icon" width="16" height="16"><use href="#icon-check" /></svg>
-              Доступ до маркету й усіх загальних активностей
-            </p>
-            <p class="tickets__includes-item">
-              <svg class="tickets__check-icon" width="16" height="16"><use href="#icon-check" /></svg>
-              Участь у розіграші подарунків
-            </p>
+            <p class="tickets__limit">Кількість місць обмежена — лише 60 учасників.</p>
+
+            <div class="tickets__actions">
+              <button type="button" class="btn btn-primary btn-lg ticket-open-btn">
+                Купити квиток
+                <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </button>
+              <button type="button" class="btn btn-secondary btn-lg support-open-btn">
+                Підтримати проект
+              </button>
+            </div>
           </div>
-        </div>
 
-        <p class="tickets__limit reveal">Кількість місць обмежена — лише 60 учасників.</p>
-
-        <div class="reveal">
-          <button type="button" class="btn btn-primary btn-lg ticket-open-btn">
-            Купити квиток
-            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </button>
+          <div class="tickets__includes reveal">
+            <p class="tickets__includes-title">У вартість квитка входить:</p>
+            <div class="tickets__includes-list">
+              <p class="tickets__includes-item">
+                <svg class="tickets__check-icon" width="16" height="16"><use href="#icon-check" /></svg>
+                Участь у фестивалі протягом усього дня
+              </p>
+              <p class="tickets__includes-item">
+                <svg class="tickets__check-icon" width="16" height="16"><use href="#icon-check" /></svg>
+                3 майстер-класи на вибір — по одному з кожної лінійки
+              </p>
+              <p class="tickets__includes-item">
+                <svg class="tickets__check-icon" width="16" height="16"><use href="#icon-check" /></svg>
+                Відкриття та закриття фестивалю
+              </p>
+              <p class="tickets__includes-item">
+                <svg class="tickets__check-icon" width="16" height="16"><use href="#icon-check" /></svg>
+                Кейтеринг та кава
+              </p>
+              <p class="tickets__includes-item">
+                <svg class="tickets__check-icon" width="16" height="16"><use href="#icon-check" /></svg>
+                Доступ до маркету й усіх загальних активностей
+              </p>
+              <p class="tickets__includes-item">
+                <svg class="tickets__check-icon" width="16" height="16"><use href="#icon-check" /></svg>
+                Участь у розіграші подарунків
+              </p>
+            </div>
+          </div>
         </div>
 
       </div>
     </section>
 
-
-    <!-- ═══════════════ 09 — PARTNERS ═══════════════ -->
-
-    <section class="section" id="partners">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="section-header__label">Партнери</p>
-          <h2 class="section-header__title">Партнери фестивалю</h2>
-        </div>
-        <div class="partners__placeholder reveal">
-          <div class="partners__placeholder-icon">
-            <svg width="32" height="32"><use href="#icon-heart" /></svg>
-          </div>
-          <p>Інформація про партнерів буде додана найближчим часом.</p>
-          <p class="partners__placeholder-sub">Якщо ви хочете стати партнером фестивалю — зв'яжіться з нами.</p>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ═══════════════ 10 — FAQ ═══════════════ -->
-
-    <section class="section" id="faq" style="background: var(--color-white);">
-      <!-- Olive branch decoration -->
-      <div class="olive-branch olive-branch--faq" aria-hidden="true">
-        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 200C10 200 30 160 50 130C70 100 90 80 110 60C130 40 160 20 190 0"
-            stroke="var(--color-brand-primary)" stroke-width="0.8" opacity="0.06" stroke-linecap="round" />
-          <path d="M50 130C50 130 30 125 25 112C20 99 32 90 40 95C48 100 48 115 50 130Z"
-            fill="var(--color-brand-primary)" opacity="0.04" />
-          <path d="M80 95C80 95 60 90 55 77C50 64 62 55 70 60C78 65 78 80 80 95Z"
-            fill="var(--color-brand-primary)" opacity="0.03" />
-          <path d="M110 65C110 65 90 60 85 47C80 34 92 25 100 30C108 35 108 50 110 65Z"
-            fill="var(--color-brand-primary)" opacity="0.04" />
-          <path d="M140 40C140 40 120 35 115 22C110 9 122 0 130 5C138 10 138 25 140 40Z"
-            fill="var(--color-brand-primary)" opacity="0.03" />
-          <circle cx="45" cy="118" r="1.5" fill="var(--color-brand-gold)" opacity="0.08" />
-          <circle cx="75" cy="83" r="1.5" fill="var(--color-brand-gold)" opacity="0.06" />
-          <circle cx="105" cy="53" r="1.5" fill="var(--color-brand-gold)" opacity="0.08" />
-        </svg>
-      </div>
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="section-header__label">Питання — відповіді</p>
-          <h2 class="section-header__title">Часті питання</h2>
-        </div>
-
-        <div class="faq__list reveal">
-          <div class="faq__item">
-            <button class="faq__question" aria-expanded="false">
-              <span class="faq__question-text">
-                <svg class="faq__q-icon" width="20" height="20"><use href="#icon-user" /></svg>
-                Чи потрібно бути психологом або мати досвід участі в психологічних практиках?
-              </span>
-              <svg class="faq__icon" viewBox="0 0 24 24">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </button>
-            <div class="faq__answer">
-              <div class="faq__answer-inner">
-                Ні. «ЛІТАЙ» відкритий для всіх, кому цікаві психологія, пізнання себе та новий досвід. Спеціальні знання
-                чи попередня підготовка не потрібні.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq__item">
-            <button class="faq__question" aria-expanded="false">
-              <span class="faq__question-text">
-                <svg class="faq__q-icon" width="20" height="20"><use href="#icon-info" /></svg>
-                Як обрати майстер-клас?
-              </span>
-              <svg class="faq__icon" viewBox="0 0 24 24">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </button>
-            <div class="faq__answer">
-              <div class="faq__answer-inner">
-                Перед кожною лінійкою спікери коротко представлять себе та свої майстер-класи. Також ви отримаєте
-                програму з усіма темами, щоб легко обрати те, що найбільше відгукується.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq__item">
-            <button class="faq__question" aria-expanded="false">
-              <span class="faq__question-text">
-                <svg class="faq__q-icon" width="20" height="20"><use href="#icon-group" /></svg>
-                Чи можна прийти на фестиваль самій/самому?
-              </span>
-              <svg class="faq__icon" viewBox="0 0 24 24">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </button>
-            <div class="faq__answer">
-              <div class="faq__answer-inner">
-                Звісно. Фестиваль створений так, щоб було легко знайомитися, спілкуватися та почуватися комфортно,
-                навіть якщо ви прийшли самі.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq__item">
-            <button class="faq__question" aria-expanded="false">
-              <span class="faq__question-text">
-                <svg class="faq__q-icon" width="20" height="20"><use href="#icon-ticket" /></svg>
-                Чи можна повернути квиток?
-              </span>
-              <svg class="faq__icon" viewBox="0 0 24 24">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </button>
-            <div class="faq__answer">
-              <div class="faq__answer-inner">
-                Так, квиток можна повернути не пізніше ніж за 14 днів до початку фестивалю. Зверніться до нас через Instagram або email.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq__item">
-            <button class="faq__question" aria-expanded="false">
-              <span class="faq__question-text">
-                <svg class="faq__q-icon" width="20" height="20"><use href="#icon-location" /></svg>
-                Чи є парковка поруч із локацією?
-              </span>
-              <svg class="faq__icon" viewBox="0 0 24 24">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </button>
-            <div class="faq__answer">
-              <div class="faq__answer-inner">
-                Поруч із Mobilant є громадська парковка. Також зручно дістатися громадським транспортом — зупинка Plantin знаходиться неподалік.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ═══════════════ 11 — TEAM ═══════════════ -->
-
-    <section class="section" id="team">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="section-header__label">Хто створює «ЛІТАЙ»</p>
-          <h2 class="section-header__title">Команда</h2>
-        </div>
-
-        <div class="team__org reveal">
-          <div class="team__org-icon">
-            <svg width="28" height="28"><use href="#icon-home" /></svg>
-          </div>
-          <h3 class="team__org-name">OporaSpace</h3>
-          <p class="team__org-desc">Неприбуткова громадська організація в Бельгії, що створює проєкти та події для
-            української спільноти. Ми віримо, що разом ми сильніші.</p>
-        </div>
-
-        <div class="team__members reveal-stagger">
-          <div class="team__card">
-            <img src="assets/photos/speakers/speaker-1.jpg" alt="Катерина Степаненко" class="team__photo" loading="lazy">
-            <p class="team__name">Катерина Степаненко</p>
-          </div>
-          <div class="team__card">
-            <div class="team__photo team__photo--placeholder">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
-                <circle cx="12" cy="7" r="4" />
-              </svg>
-            </div>
-            <p class="team__name">Яна Рега</p>
-          </div>
-          <div class="team__card">
-            <div class="team__photo team__photo--placeholder">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
-                <circle cx="12" cy="7" r="4" />
-              </svg>
-            </div>
-            <p class="team__name">Вікторія Бойченко</p>
-          </div>
-          <div class="team__card">
-            <img src="assets/photos/speakers/speaker-10.jpg" alt="Ірина Макара" class="team__photo" loading="lazy">
-            <p class="team__name">Ірина Макара</p>
-          </div>
-          <div class="team__card">
-            <img src="assets/photos/speakers/speaker-6.jpg" alt="Валентина Тищук" class="team__photo" loading="lazy">
-            <p class="team__name">Валентина Тищук</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
   </main>
-
-
-  <!-- ═══════════════ SPEAKER MODAL ═══════════════ -->
-
-  <div class="speakers-modal" id="speaker-modal" role="dialog" aria-label="Інформація про спікера">
-    <div class="speakers-modal__overlay" id="speaker-modal-overlay"></div>
-    <div class="speakers-modal__content">
-      <button class="speakers-modal__close" id="speaker-modal-close" aria-label="Закрити">
-        <svg viewBox="0 0 24 24">
-          <line x1="18" y1="6" x2="6" y2="18" />
-          <line x1="6" y1="6" x2="18" y2="18" />
-        </svg>
-      </button>
-      <img class="speakers-modal__photo" id="modal-photo" src="" alt="">
-      <h3 class="speakers-modal__name" id="modal-name"></h3>
-      <p class="speakers-modal__role" id="modal-role"></p>
-      <div class="speakers-modal__bio" id="modal-bio"></div>
-    </div>
-  </div>
-
 
   <!-- ═══════════════ TICKET FORM MODAL ═══════════════ -->
 
@@ -1446,6 +1098,66 @@
   </div>
 
 
+  <!-- ═══════════════ SUPPORT MODAL — РЕКВІЗИТИ ═══════════════ -->
+
+  <div class="support-modal" id="support-modal" role="dialog" aria-modal="true" aria-label="Підтримати проект">
+    <div class="support-modal__overlay" id="support-modal-overlay"></div>
+    <div class="support-modal__content">
+      <button class="support-modal__close" id="support-modal-close" aria-label="Закрити">
+        <svg viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <div class="support-modal__header">
+        <h3 class="support-modal__title">Підтримати проект</h3>
+        <p class="support-modal__subtitle">Реквізити для переказу — копіюються одним натисканням</p>
+      </div>
+      <ul class="requisites">
+        <li class="requisite">
+          <div class="requisite__main">
+            <span class="requisite__label">Отримувач</span>
+            <span class="requisite__value">ФОП Коваль Оксана Ігорівна</span>
+          </div>
+          <button type="button" class="requisite__copy" data-copy="ФОП Коваль Оксана Ігорівна">Копіювати</button>
+        </li>
+        <li class="requisite">
+          <div class="requisite__main">
+            <span class="requisite__label">IBAN</span>
+            <span class="requisite__value">UA213223130000026207654321001</span>
+          </div>
+          <button type="button" class="requisite__copy" data-copy="UA213223130000026207654321001">Копіювати</button>
+        </li>
+        <li class="requisite">
+          <div class="requisite__main">
+            <span class="requisite__label">Номер картки</span>
+            <span class="requisite__value">5375 4141 0293 7742</span>
+          </div>
+          <button type="button" class="requisite__copy" data-copy="5375414102937742">Копіювати</button>
+        </li>
+        <li class="requisite">
+          <div class="requisite__main">
+            <span class="requisite__label">Банк</span>
+            <span class="requisite__value">АТ «Ай Банк», МФО 322313</span>
+          </div>
+          <button type="button" class="requisite__copy" data-copy="АТ «Ай Банк», МФО 322313">Копіювати</button>
+        </li>
+        <li class="requisite">
+          <div class="requisite__main">
+            <span class="requisite__label">Призначення платежу</span>
+            <span class="requisite__value">Благодійний внесок — ЛІТАЙ FEST</span>
+          </div>
+          <button type="button" class="requisite__copy" data-copy="Благодійний внесок — ЛІТАЙ FEST">Копіювати</button>
+        </li>
+      </ul>
+      <button type="button" class="btn btn-primary support-modal__copy-all" id="support-copy-all">
+        Скопіювати всі реквізити
+      </button>
+      <p class="support-modal__note">Реквізити тимчасові — перед переказом уточніть їх у організаторів.</p>
+    </div>
+  </div>
+
+
   <!-- ═══════════════ FOOTER ═══════════════ -->
 
   <footer class="footer">
@@ -1462,10 +1174,6 @@
         <a href="#program" class="footer__nav-link">
           <svg width="16" height="16"><use href="#icon-calendar" /></svg>
           Програма
-        </a>
-        <a href="#speakers" class="footer__nav-link">
-          <svg width="16" height="16"><use href="#icon-user" /></svg>
-          Учасники
         </a>
         <a href="#location" class="footer__nav-link">
           <svg width="16" height="16"><use href="#icon-location" /></svg>
@@ -1504,7 +1212,6 @@
   <script src="js/mobile-menu.js"></script>
   <script src="js/hero.js"></script>
   <script src="js/scroll-animations.js"></script>
-  <script src="js/faq.js"></script>
   <script src="js/particles.js"></script>
   <script src="js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>

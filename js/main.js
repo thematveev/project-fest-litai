@@ -2,72 +2,6 @@
  * Main — initialize all modules
  */
 (function () {
-  // Masterclasses tabs
-  var tabs = document.querySelectorAll('.masterclasses__tab');
-  var panels = document.querySelectorAll('.masterclasses__panel');
-
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      var target = tab.getAttribute('data-tab');
-
-      tabs.forEach(function (t) {
-        t.classList.remove('is-active');
-      });
-      tab.classList.add('is-active');
-
-      panels.forEach(function (p) {
-        p.classList.remove('is-active');
-      });
-      document.querySelector('[data-panel="' + target + '"]').classList.add('is-active');
-    });
-  });
-
-  // Speakers modal
-  var modal = document.getElementById('speaker-modal');
-  var modalOverlay = document.getElementById('speaker-modal-overlay');
-  var modalClose = document.getElementById('speaker-modal-close');
-  var modalPhoto = document.getElementById('modal-photo');
-  var modalName = document.getElementById('modal-name');
-  var modalRole = document.getElementById('modal-role');
-  var modalBio = document.getElementById('modal-bio');
-
-  function openModal(card) {
-    var photo = card.querySelector('.speakers__photo');
-    var name = card.querySelector('.speakers__name');
-    var role = card.querySelector('.speakers__role');
-    var bio = card.querySelector('.speakers__bio');
-
-    modalPhoto.src = photo.src || '';
-    modalPhoto.alt = photo.alt || '';
-    modalName.textContent = name.textContent;
-    modalRole.textContent = role.textContent;
-    modalBio.innerHTML = bio.innerHTML;
-
-    modal.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
-    modalClose.focus();
-  }
-
-  function closeModal() {
-    modal.classList.remove('is-open');
-    document.body.style.overflow = '';
-  }
-
-  document.querySelectorAll('.speakers__toggle').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var card = btn.closest('.speakers__card');
-      openModal(card);
-    });
-  });
-
-  modalClose.addEventListener('click', closeModal);
-  modalOverlay.addEventListener('click', closeModal);
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && modal.classList.contains('is-open')) {
-      closeModal();
-    }
-  });
-
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener('click', function (e) {
@@ -160,5 +94,100 @@
       submitBtn.disabled = false;
       submitBtn.textContent = 'Надіслати заявку';
     });
+  });
+  // Support modal — реквізити
+  var supportModal = document.getElementById('support-modal');
+  var supportOverlay = document.getElementById('support-modal-overlay');
+  var supportClose = document.getElementById('support-modal-close');
+  var supportCopyAll = document.getElementById('support-copy-all');
+
+  function openSupportModal() {
+    supportModal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    supportClose.focus();
+  }
+
+  function closeSupportModal() {
+    supportModal.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.support-open-btn').forEach(function (btn) {
+    btn.addEventListener('click', openSupportModal);
+  });
+
+  supportClose.addEventListener('click', closeSupportModal);
+  supportOverlay.addEventListener('click', closeSupportModal);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && supportModal.classList.contains('is-open')) {
+      closeSupportModal();
+    }
+  });
+
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text);
+    }
+
+    return new Promise(function (resolve, reject) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '-1000px';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = false;
+      try {
+        ok = document.execCommand('copy');
+      } catch (err) {
+        ok = false;
+      }
+      document.body.removeChild(ta);
+      ok ? resolve() : reject(new Error('copy failed'));
+    });
+  }
+
+  function flashCopied(btn) {
+    if (!btn.getAttribute('data-label')) {
+      btn.setAttribute('data-label', btn.textContent.trim());
+    }
+    btn.textContent = 'Скопійовано';
+    btn.classList.add('is-copied');
+    clearTimeout(btn._copyTimer);
+    btn._copyTimer = setTimeout(function () {
+      btn.textContent = btn.getAttribute('data-label');
+      btn.classList.remove('is-copied');
+    }, 1800);
+  }
+
+  function copyFailed() {
+    alert('Не вдалося скопіювати. Виділіть текст реквізитів і скопіюйте вручну.');
+  }
+
+  document.querySelectorAll('.requisite__copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      copyText(btn.getAttribute('data-copy') || '')
+        .then(function () {
+          flashCopied(btn);
+        })
+        .catch(copyFailed);
+    });
+  });
+
+  supportCopyAll.addEventListener('click', function () {
+    var lines = [];
+    document.querySelectorAll('#support-modal .requisite').forEach(function (row) {
+      var label = row.querySelector('.requisite__label');
+      var value = row.querySelector('.requisite__value');
+      lines.push(label.textContent.trim() + ': ' + value.textContent.trim());
+    });
+
+    copyText(lines.join('\n'))
+      .then(function () {
+        flashCopied(supportCopyAll);
+      })
+      .catch(copyFailed);
   });
 })();
