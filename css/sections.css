@@ -40,21 +40,6 @@
   margin-bottom: 20px;
 }
 
-/* Values — left branch */
-.olive-branch--values-left {
-  left: 2%;
-  top: 10%;
-  width: 120px;
-  height: 300px;
-}
-
-/* Values — right branch */
-.olive-branch--values-right {
-  right: 2%;
-  top: 10%;
-  width: 120px;
-  height: 300px;
-}
 
 /* Location — horizontal branch */
 .olive-branch--location {
@@ -93,10 +78,6 @@
     height: 300px;
     right: 2%;
     opacity: 0.6;
-  }
-  .olive-branch--values-left,
-  .olive-branch--values-right {
-    display: none;
   }
 }
 
@@ -696,7 +677,7 @@
 
 .psych__answer {
   max-width: 760px;
-  margin: 0 auto var(--space-8);
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -712,37 +693,6 @@
 .psych__text {
   font-size: 18px;
   line-height: 1.65;
-  color: var(--color-gray-700);
-}
-
-.psych__points {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-6);
-}
-
-.psych__point {
-  padding-top: var(--space-5);
-  border-top: 1px solid var(--color-gray-300);
-}
-
-.psych__num {
-  font-family: var(--font-display);
-  font-size: 28px;
-  color: var(--color-brand-gold-dark);
-  margin-bottom: var(--space-3);
-}
-
-.psych__point-title {
-  font-size: 22px;
-  line-height: 1.25;
-  color: var(--color-brand-dark);
-  margin-bottom: var(--space-3);
-}
-
-.psych__point-text {
-  font-size: 16px;
-  line-height: 1.6;
   color: var(--color-gray-700);
 }
 
@@ -762,15 +712,6 @@
 
   .psych__text {
     font-size: 17px;
-  }
-
-  .psych__points {
-    grid-template-columns: 1fr;
-    gap: var(--space-5);
-  }
-
-  .psych__point-title {
-    font-size: 20px;
   }
 
   .psych__note {
@@ -878,78 +819,8 @@
   opacity: 0.7;
 }
 
-/* ─── 07 — Values ─── */
 
-.values__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-7);
-}
-
-.values__item {
-  text-align: center;
-}
-
-.values__icon {
-  width: 72px;
-  height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-brand-background);
-  border-radius: 50%;
-  margin: 0 auto var(--space-4);
-  color: var(--color-brand-gold);
-}
-
-.values__number {
-  font-family: var(--font-display);
-  font-size: 64px;
-  font-weight: var(--weight-medium);
-  color: var(--color-brand-gold-light);
-  line-height: 1;
-  margin-bottom: var(--space-3);
-}
-
-.values__name {
-  font-family: var(--font-display);
-  font-size: 28px;
-  color: var(--color-brand-dark);
-  margin-bottom: var(--space-2);
-}
-
-.values__desc {
-  font-size: 15px;
-  color: var(--color-gray-700);
-  line-height: 1.55;
-}
-
-.values__decorative {
-  width: 40px;
-  height: 1px;
-  background: var(--color-brand-gold);
-  margin: var(--space-4) auto;
-}
-
-@media (max-width: 768px) {
-  .values__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-6);
-  }
-
-  .values__number {
-    font-size: 48px;
-  }
-}
-
-@media (max-width: 480px) {
-  .values__grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-/* ─── 08 — Location ─── */
+/* ─── 07 — Location ─── */
 
 .location__inner {
   display: grid;
@@ -1095,7 +966,7 @@
 }
 
 
-/* ─── 09 — Tickets ─── */
+/* ─── 08 — Tickets ─── */
 
 .tickets {
   background: url('../assets/hero/tikets.jpg') center/cover no-repeat;
